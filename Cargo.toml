@@ -1,0 +1,16 @@
+[package]
+name = "piston2d-python"
+version = "0.1.0"
+authors = ["Avery <19372006+starsflower@users.noreply.github.com>"]
+edition = "2018"
+
+[lib]
+name="pyston2d"
+crate-type = ["cdylib"]
+
+[dependencies]
+piston = "0.53.0"
+piston2d-graphics = "0.40.0"
+pistoncore-glutin_window = "0.69.0"
+piston2d-opengl_graphics = "0.78.0"
+pyo3 = { version = "0.13.2", features = ["extension-module"] }
