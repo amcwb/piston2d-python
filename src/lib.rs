@@ -4,7 +4,7 @@ extern crate piston;
 use std::{collections::HashSet};
 use glutin_window::GlutinWindow;
 use opengl_graphics::{GlGraphics, OpenGL};
-use piston::{AdvancedWindow, RenderEvent, UpdateEvent, WindowSettings as PistonWindowSettings};
+use piston::{AdvancedWindow, Button, PressEvent, ReleaseEvent, RenderEvent, UpdateEvent, WindowSettings as PistonWindowSettings};
 use pyo3::{prelude::*, wrap_pymodule};
 use pyo3::wrap_pyfunction;
 use piston::{
@@ -15,7 +15,7 @@ use piston::{
 mod window;
 use window::{WindowSettings, Window};
 
-static version: &str = "0.1.0";
+static VERSION: &str = "0.1.1";
 
 #[pyclass(unsendable)]
 struct Pyston2dApp {
@@ -36,21 +36,29 @@ impl Pyston2dApp {
         if let Some(args) = e.render_args() {
             // self.update(&args);
             let render_handlers = &self.render_handlers;
-            self.gl.draw(args.viewport(), |c, gl| {
+            self.gl.draw(args.viewport(), |_c, _gl| {
                 for function in render_handlers {
                     Python::with_gil(|py| {
-                        function.call0(py);
+                        function.call0(py).unwrap();
                     })
                 }
             })
         }
 
-        if let Some(args) = e.update_args() {
+        if let Some(_args) = e.update_args() {
             for handler in &self.update_handlers {
                 Python::with_gil(|py| {
-                    handler.call0(py);
+                    handler.call0(py).unwrap();
                 })
             }
+        }
+
+        if let Some(Button::Keyboard(key)) = e.press_args() {
+            self.keys.insert(key);
+        }
+
+        if let Some(Button::Keyboard(key)) = e.release_args() {
+            self.keys.remove(&key);
         }
 
         Ok(())
@@ -97,7 +105,7 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Pyston2dApp> {
     let opengl = OpenGL::V3_2;
 
     // Create a Glutin window.
-    let mut window: GlutinWindow = PistonWindowSettings::new(title, dimensions)
+    let window: GlutinWindow = PistonWindowSettings::new(title, dimensions)
         .graphics_api(opengl)
         .decorated(true)
         .exit_on_esc(true)
@@ -128,11 +136,13 @@ pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
 /// A Python module implemented in Rust.
 #[pymodule]
 fn pyston2d(_py: Python, m: &PyModule) -> PyResult<()> {
+    // Add utils
     m.add_function(wrap_pyfunction!(init, m)?)?;
     m.add_class::<Pyston2dApp>()?;
     
+    // Add window module
     m.add_wrapped(wrap_pymodule!(window))?;
+    m.add("__version__", VERSION)?;
 
-    m.add("__version__", version)?;
     Ok(())
 }
