@@ -1,5 +1,5 @@
-import pyston2d
-from pyston2d.window import WindowSettings
+import piston2d
+from piston2d.window import WindowSettings
 settings = WindowSettings("test", (100, 100))
 
 

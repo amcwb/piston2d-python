@@ -5,7 +5,7 @@ authors = ["Avery <19372006+starsflower@users.noreply.github.com>"]
 edition = "2018"
 
 [lib]
-name="pyston2d"
+name="piston2d"
 crate-type = ["cdylib"]
 
 [dependencies]

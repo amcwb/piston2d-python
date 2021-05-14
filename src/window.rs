@@ -3,7 +3,7 @@ use pyo3::prelude::*;
 use glutin_window::GlutinWindow;
 use piston::{Size, WindowSettings as PistonWindowSettings};
 
-#[pyclass]
+#[pyclass(module="piston2d")]
 pub struct WindowSettings {
     pub __internal: PistonWindowSettings
 }
@@ -158,7 +158,7 @@ impl WindowSettings {
     }
 }
 
-#[pyclass(unsendable)]
+#[pyclass(unsendable, module="piston2d")]
 pub struct Window {
     pub __internal: GlutinWindow
 }
@@ -167,7 +167,6 @@ pub struct Window {
 impl Window {
     #[new]
     fn new(settings: Py<WindowSettings>) -> PyResult<Self> {
-        
         // Extract value with the GIL to use it to construct a new window
         Ok(Python::with_gil(|py| {
             let window_settings: WindowSettings = settings.extract(py).unwrap();

@@ -1,6 +1,6 @@
-import pyston2d
+import piston2d
 
-app = pyston2d.init("my title", (100, 100))
+app = piston2d.init("my title", (100, 100))
 
 @app.render
 def render():

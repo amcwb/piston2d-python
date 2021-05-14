@@ -18,7 +18,7 @@ use window::{WindowSettings, Window};
 static VERSION: &str = "0.1.1";
 
 #[pyclass(unsendable)]
-struct Pyston2dApp {
+struct Piston2dApp {
     gl: GlGraphics, // OpenGL drawing backend.
     window: GlutinWindow,
     keys: HashSet<Key>,
@@ -28,8 +28,8 @@ struct Pyston2dApp {
     update_handlers: Vec<PyObject>
 }
 
-#[pymethods]
-impl Pyston2dApp {
+#[pymethods(module="piston2d")]
+impl Piston2dApp {
     pub fn tick(&mut self) -> PyResult<()> {
         let e = self.events.next(&mut self.window).unwrap();
 
@@ -100,7 +100,7 @@ impl Pyston2dApp {
 }
 
 #[pyfunction]
-fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Pyston2dApp> {
+fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
     // Change this to OpenGL::V2_1 if not working.
     let opengl = OpenGL::V3_2;
 
@@ -113,7 +113,7 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Pyston2dApp> {
         .unwrap();
 
 
-    Ok(Pyston2dApp {
+    Ok(Piston2dApp {
         gl: GlGraphics::new(opengl),
         window: window,
         keys: HashSet::new(),
@@ -135,10 +135,10 @@ pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn pyston2d(_py: Python, m: &PyModule) -> PyResult<()> {
+fn piston2d(_py: Python, m: &PyModule) -> PyResult<()> {
     // Add utils
     m.add_function(wrap_pyfunction!(init, m)?)?;
-    m.add_class::<Pyston2dApp>()?;
+    m.add_class::<Piston2dApp>()?;
     
     // Add window module
     m.add_wrapped(wrap_pymodule!(window))?;
