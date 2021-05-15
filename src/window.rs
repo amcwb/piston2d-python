@@ -166,7 +166,23 @@ impl WindowSettings {
 
 #[pyclass(unsendable, module="piston2d")]
 pub struct Window {
-    pub _piston: GlutinWindow
+    pub _piston: GlutinWindow,
+
+    // To aid cloning
+    pub _settings: WindowSettings
+}
+
+impl Clone for Window {
+    fn clone(&self) -> Self {
+        Window {
+            _piston: GlutinWindow::new(&self._settings._piston).unwrap(),
+            _settings: self._settings.clone()
+        }
+    }
+
+    fn clone_from(&mut self, source: &Self) {
+        *self = source.clone()
+    }
 }
 
 /// Implements AdvancedWindow
@@ -178,7 +194,8 @@ impl Window {
         Ok(Python::with_gil(|py| {
             let window_settings: WindowSettings = settings.extract(py).unwrap();
             Window {
-                _piston: GlutinWindow::new(&window_settings._piston).unwrap()
+                _piston: GlutinWindow::new(&window_settings._piston).unwrap(),
+                _settings: window_settings
             }
         }))
     }

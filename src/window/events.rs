@@ -1,7 +1,9 @@
 use graphics::{Viewport as PistonViewport};
 use pyo3::prelude::*;
 
-use piston::{Event as PistonEvent, RenderArgs as PistonRenderArgs, UpdateArgs as PistonUpdateArgs, RenderEvent, UpdateEvent};
+use piston::{Event as PistonEvent, Events as PistonEvents, EventSettings as PistonEventSettings, RenderArgs as PistonRenderArgs, RenderEvent, UpdateArgs as PistonUpdateArgs, UpdateEvent};
+
+use super::Window;
 
 #[pyclass]
 pub struct Event {
@@ -117,5 +119,68 @@ impl Viewport {
     #[getter]
     fn window_size(&self) -> PyResult<[f64; 2]> {
         Ok(self._piston.window_size)
+    }
+}
+
+#[pyclass]
+#[derive(Clone, Copy)]
+struct EventSettings {
+    _piston: PistonEventSettings
+}
+
+#[pymethods]
+impl EventSettings {
+    #[new]
+    fn new() -> Self {
+        EventSettings {
+            _piston: PistonEventSettings::new()
+        }
+    }
+    #[getter]
+    fn max_fps(&self) -> PyResult<u64> {
+        Ok(self._piston.max_fps)
+    }
+    #[getter]
+    fn ups(&self) -> PyResult<u64> {
+        Ok(self._piston.ups)
+    }
+    #[getter]
+    fn ups_reset(&self) -> PyResult<u64> {
+        Ok(self._piston.ups_reset)
+    }
+    #[getter]
+    fn swap_buffers(&self) -> PyResult<bool> {
+        Ok(self._piston.swap_buffers)
+    }
+    #[getter]
+    fn bench_mode(&self) -> PyResult<bool> {
+        Ok(self._piston.bench_mode)
+    }
+    #[getter]
+    fn lazy(&self) -> PyResult<bool> {
+        Ok(self._piston.lazy)
+    }
+}
+
+#[pyclass]
+struct Events {
+    pub _piston: PistonEvents
+}
+
+/// Basic implementation
+#[pymethods]
+impl Events {
+    #[new]
+    fn new(settings: EventSettings) -> Self {
+        Events {
+            _piston: PistonEvents::new(settings._piston)
+        }
+    }
+
+    fn next(&mut self, window: &mut Window) -> PyResult<Option<Event>> {
+        Ok(match self._piston.next(&mut window._piston) {
+            Some(event) => Some(Event { _piston: event }),
+            None => None
+        })
     }
 }
