@@ -13,7 +13,8 @@ use piston::{
 };
 
 mod window;
-use window::{WindowSettings, Window};
+use window::{Window, WindowSettings, events::{RenderArgs, UpdateArgs, Viewport}};
+use window::events::Event;
 
 static VERSION: &str = "0.1.1";
 
@@ -124,11 +125,24 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
     })
 }
 
+#[pymodule]
+pub fn events(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<Event>()?;
+    m.add_class::<Viewport>()?;
+    m.add_class::<RenderArgs>()?;
+    m.add_class::<UpdateArgs>()?;
+
+    Ok(())
+}
+
 
 #[pymodule]
 pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<WindowSettings>()?;
     m.add_class::<Window>()?;
+
+    // Submodule events
+    m.add_wrapped(wrap_pymodule!(events))?;
 
     Ok(())
 }
