@@ -1,13 +1,15 @@
-use graphics::{Viewport as PistonViewport};
+use graphics::Viewport as PistonViewport;
 use pyo3::prelude::*;
 
-use piston::{Event as PistonEvent, Events as PistonEvents, EventSettings as PistonEventSettings, RenderArgs as PistonRenderArgs, RenderEvent, UpdateArgs as PistonUpdateArgs, UpdateEvent};
+use piston::{Event as PistonEvent, EventSettings as PistonEventSettings, Events as PistonEvents, PressEvent, RenderArgs as PistonRenderArgs, RenderEvent, UpdateArgs as PistonUpdateArgs, UpdateEvent};
+
+use crate::input::Button;
 
 use super::Window;
 
 #[pyclass]
 pub struct Event {
-    pub _piston: PistonEvent
+    pub _piston: PistonEvent,
 }
 
 #[pymethods]
@@ -15,35 +17,43 @@ impl Event {
     fn is_input(&self) -> PyResult<bool> {
         match &self._piston {
             PistonEvent::Input(..) => Ok(true),
-            _ => Ok(false)
+            _ => Ok(false),
         }
     }
 
     fn is_loop(&self) -> PyResult<bool> {
         match &self._piston {
             PistonEvent::Loop(..) => Ok(true),
-            _ => Ok(false)
+            _ => Ok(false),
         }
     }
 
     fn render_args(&self) -> PyResult<Option<RenderArgs>> {
         match self._piston.render_args() {
-            Some(event  ) => Ok(Some(event.into())),
-            None => Ok(None)
+            Some(event) => Ok(Some(event.into())),
+            None => Ok(None),
         }
     }
 
     fn update_args(&self) -> PyResult<Option<UpdateArgs>> {
         match self._piston.update_args() {
             Some(event) => Ok(Some(event.into())),
-            None => Ok(None)
+            None => Ok(None),
+        }
+    }
+
+    fn press_args(&self) -> PyResult<Option<Button>> {
+        match self._piston.press_args() {
+            Some(event) => Ok(Some(event.into())),
+            None => Ok(None),
         }
     }
 }
 
+
 #[pyclass]
 pub struct RenderArgs {
-    _piston: PistonRenderArgs
+    _piston: PistonRenderArgs,
 }
 
 #[pymethods]
@@ -66,23 +76,20 @@ impl RenderArgs {
     #[getter]
     fn viewport(&self) -> PyResult<Viewport> {
         Ok(Viewport {
-            _piston: self._piston.viewport()
+            _piston: self._piston.viewport(),
         })
     }
 }
 
-
 impl From<PistonRenderArgs> for RenderArgs {
     fn from(pra: PistonRenderArgs) -> Self {
-        RenderArgs {
-            _piston: pra
-        }
+        RenderArgs { _piston: pra }
     }
 }
 
 #[pyclass]
 pub struct UpdateArgs {
-    _piston: PistonUpdateArgs
+    pub _piston: PistonUpdateArgs,
 }
 
 #[pymethods]
@@ -95,15 +102,13 @@ impl UpdateArgs {
 
 impl From<PistonUpdateArgs> for UpdateArgs {
     fn from(pua: PistonUpdateArgs) -> Self {
-        UpdateArgs {
-            _piston: pua
-        }
+        UpdateArgs { _piston: pua }
     }
 }
 
 #[pyclass]
 pub struct Viewport {
-    _piston: PistonViewport,
+    pub _piston: PistonViewport,
 }
 
 #[pymethods]
@@ -125,7 +130,7 @@ impl Viewport {
 #[pyclass]
 #[derive(Clone, Copy)]
 struct EventSettings {
-    _piston: PistonEventSettings
+    _piston: PistonEventSettings,
 }
 
 #[pymethods]
@@ -133,7 +138,7 @@ impl EventSettings {
     #[new]
     fn new() -> Self {
         EventSettings {
-            _piston: PistonEventSettings::new()
+            _piston: PistonEventSettings::new(),
         }
     }
     #[getter]
@@ -164,7 +169,7 @@ impl EventSettings {
 
 #[pyclass]
 struct Events {
-    pub _piston: PistonEvents
+    pub _piston: PistonEvents,
 }
 
 /// Basic implementation
@@ -173,14 +178,14 @@ impl Events {
     #[new]
     fn new(settings: EventSettings) -> Self {
         Events {
-            _piston: PistonEvents::new(settings._piston)
+            _piston: PistonEvents::new(settings._piston),
         }
     }
 
     fn next(&mut self, window: &mut Window) -> PyResult<Option<Event>> {
         Ok(match self._piston.next(&mut window._piston) {
             Some(event) => Some(Event { _piston: event }),
-            None => None
+            None => None,
         })
     }
 }

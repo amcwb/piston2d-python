@@ -10,16 +10,9 @@ use self::events::Event;
 pub mod events;
 
 #[pyclass(module="piston2d")]
+#[derive(Clone)]
 pub struct WindowSettings {
     pub _piston: PistonWindowSettings
-}
-
-impl Clone for WindowSettings {
-    fn clone(&self) -> Self {
-        WindowSettings {
-            _piston: self._piston.clone()
-        }
-    }
 }
 
 #[pymethods]

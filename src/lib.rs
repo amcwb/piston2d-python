@@ -3,8 +3,9 @@ extern crate opengl_graphics;
 extern crate piston;
 use std::{collections::HashSet};
 use glutin_window::GlutinWindow;
+use input::Button;
 use opengl_graphics::{GlGraphics, OpenGL};
-use piston::{AdvancedWindow, Button, PressEvent, ReleaseEvent, RenderEvent, UpdateEvent, WindowSettings as PistonWindowSettings};
+use piston::{AdvancedWindow, Button as PistonButton, PressEvent, ReleaseEvent, RenderEvent, UpdateEvent, WindowSettings as PistonWindowSettings};
 use pyo3::{prelude::*, wrap_pymodule};
 use pyo3::wrap_pyfunction;
 use piston::{
@@ -12,11 +13,12 @@ use piston::{
     Key,
 };
 
-mod window;
+pub mod window;
+pub mod input;
 use window::{Window, WindowSettings, events::{RenderArgs, UpdateArgs, Viewport}};
 use window::events::Event;
 
-static VERSION: &str = "0.1.1";
+static VERSION: &str = "0.1.2";
 
 #[pyclass(unsendable)]
 struct Piston2dApp {
@@ -54,11 +56,11 @@ impl Piston2dApp {
             }
         }
 
-        if let Some(Button::Keyboard(key)) = e.press_args() {
+        if let Some(PistonButton::Keyboard(key)) = e.press_args() {
             self.keys.insert(key);
         }
 
-        if let Some(Button::Keyboard(key)) = e.release_args() {
+        if let Some(PistonButton::Keyboard(key)) = e.release_args() {
             self.keys.remove(&key);
         }
 
@@ -135,6 +137,13 @@ pub fn events(_py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
+#[pymodule]
+pub fn input(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<Button>()?;
+
+    Ok(())
+}
+
 
 #[pymodule]
 pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
@@ -156,6 +165,10 @@ fn piston2d(_py: Python, m: &PyModule) -> PyResult<()> {
     
     // Add window module
     m.add_wrapped(wrap_pymodule!(window))?;
+
+    // Add input module
+    m.add_wrapped(wrap_pymodule!(input))?;
+
     m.add("__version__", VERSION)?;
 
     Ok(())

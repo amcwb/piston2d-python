@@ -1,3 +1,4 @@
+from piston2d.piston2d.input import Button
 from piston2d.piston2d.window import Window
 from typing import Optional, Tuple
 
@@ -8,6 +9,7 @@ class Event:
 
     def render_args(self) -> Optional[RenderArgs]: ...
     def update_args(self) -> Optional[UpdateArgs]: ...
+    def press_args(self) -> Optional[Button]: ...
 
 
 class RenderArgs:
