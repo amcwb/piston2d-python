@@ -189,7 +189,7 @@ impl Viewport {
 
 #[pyclass]
 #[derive(Clone, Copy)]
-struct EventSettings {
+pub struct EventSettings {
     _piston: PistonEventSettings,
 }
 
@@ -228,7 +228,7 @@ impl EventSettings {
 }
 
 #[pyclass]
-struct Events {
+pub struct Events {
     pub _piston: PistonEvents,
 }
 

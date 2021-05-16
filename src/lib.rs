@@ -9,23 +9,23 @@ use piston::{AdvancedWindow, Button as PistonButton, PressEvent, ReleaseEvent, R
 use pyo3::{prelude::*, wrap_pymodule};
 use pyo3::wrap_pyfunction;
 use piston::{
-    event_loop::{EventSettings, Events},
+    event_loop::{EventSettings as PistonEventSettings, Events as PistonEvents},
     Key,
 };
 
 pub mod window;
 pub mod input;
-use window::{Window, WindowSettings, events::{RenderArgs, UpdateArgs, Viewport}};
+use window::{Window, WindowSettings, events::{EventSettings, Events, RenderArgs, UpdateArgs, Viewport}};
 use window::events::Event;
 
-static VERSION: &str = "0.1.3";
+static VERSION: &str = "0.1.4";
 
 #[pyclass(unsendable)]
 struct Piston2dApp {
     gl: GlGraphics, // OpenGL drawing backend.
     window: GlutinWindow,
     keys: HashSet<Key>,
-    events: Events,
+    events: PistonEvents,
 
     render_handlers: Vec<PyObject>,
     update_handlers: Vec<PyObject>
@@ -120,7 +120,7 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
         gl: GlGraphics::new(opengl),
         window: window,
         keys: HashSet::new(),
-        events: Events::new(EventSettings::new()),
+        events: PistonEvents::new(PistonEventSettings::new()),
         
         render_handlers: vec![],
         update_handlers: vec![]
@@ -130,6 +130,8 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
 #[pymodule]
 pub fn events(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<Event>()?;
+    m.add_class::<Events>()?;
+    m.add_class::<EventSettings>()?;
     m.add_class::<Viewport>()?;
     m.add_class::<RenderArgs>()?;
     m.add_class::<UpdateArgs>()?;

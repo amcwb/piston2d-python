@@ -261,3 +261,4 @@ class Mouse:
     Button6 = 6
     Button7 = 7
     Button8 = 8
+
