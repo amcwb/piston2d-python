@@ -1,7 +1,7 @@
 use graphics::Viewport as PistonViewport;
 use pyo3::prelude::*;
 
-use piston::{Event as PistonEvent, EventSettings as PistonEventSettings, Events as PistonEvents, PressEvent, RenderArgs as PistonRenderArgs, RenderEvent, UpdateArgs as PistonUpdateArgs, UpdateEvent};
+use piston::{Button as PistonButton, Event as PistonEvent, EventSettings as PistonEventSettings, Events as PistonEvents, PressEvent, ReleaseEvent, RenderArgs as PistonRenderArgs, RenderEvent, UpdateArgs as PistonUpdateArgs, UpdateEvent};
 
 use crate::input::Button;
 
@@ -45,6 +45,66 @@ impl Event {
     fn press_args(&self) -> PyResult<Option<Button>> {
         match self._piston.press_args() {
             Some(event) => Ok(Some(event.into())),
+            None => Ok(None),
+        }
+    }
+
+    fn release_args(&self) -> PyResult<Option<Button>> {
+        match self._piston.release_args() {
+            Some(event) => Ok(Some(event.into())),
+            None => Ok(None),
+        }
+    }
+
+    // Extra utility
+    fn keypress_args(&self) -> PyResult<Option<Button>> {
+        match self._piston.press_args() {
+            Some(event) => {
+                if let PistonButton::Keyboard(_) = event {
+                    Ok(Some(event.into()))
+                } else {
+                    Ok(None)
+                }
+            },
+            None => Ok(None),
+        }
+    }
+
+    fn keyrelease_args(&self) -> PyResult<Option<Button>> {
+        match self._piston.release_args() {
+            Some(event) => {
+                if let PistonButton::Keyboard(_) = event {
+                    Ok(Some(event.into()))
+                } else {
+                    Ok(None)
+                }
+            },
+            None => Ok(None),
+        }
+    }
+
+    fn mousepress_args(&self) -> PyResult<Option<Button>> {
+        match self._piston.press_args() {
+            Some(event) => {
+                if let PistonButton::Mouse(_) = event {
+                    Ok(Some(event.into()))
+                } else {
+                    Ok(None)
+                }
+            },
+            None => Ok(None),
+        }
+    }
+
+    fn mouserelease_args(&self) -> PyResult<Option<Button>> {
+        match self._piston.release_args() {
+            Some(event) => {
+                if let PistonButton::Mouse(_) = event {
+                    Ok(Some(event.into()))
+                } else {
+                    Ok(None)
+                }
+            },
             None => Ok(None),
         }
     }

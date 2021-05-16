@@ -18,7 +18,7 @@ pub mod input;
 use window::{Window, WindowSettings, events::{RenderArgs, UpdateArgs, Viewport}};
 use window::events::Event;
 
-static VERSION: &str = "0.1.2";
+static VERSION: &str = "0.1.3";
 
 #[pyclass(unsendable)]
 struct Piston2dApp {
