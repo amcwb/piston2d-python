@@ -167,6 +167,7 @@ impl From<PistonUpdateArgs> for UpdateArgs {
 }
 
 #[pyclass]
+#[derive(Clone, Copy)]
 pub struct Viewport {
     pub _piston: PistonViewport,
 }

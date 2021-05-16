@@ -1,37 +1,46 @@
-extern crate glutin_window;
-extern crate opengl_graphics;
-extern crate piston;
-use std::{collections::HashSet};
+use crate::graphics::rectangle;
+use crate::graphics::Context;
 use glutin_window::GlutinWindow;
 use input::Button;
-use opengl_graphics::{GlGraphics, OpenGL};
-use piston::{AdvancedWindow, Button as PistonButton, PressEvent, ReleaseEvent, RenderEvent, UpdateEvent, WindowSettings as PistonWindowSettings};
-use pyo3::{prelude::*, wrap_pymodule};
-use pyo3::wrap_pyfunction;
+use opengl::GlGraphics;
+use opengl_graphics::{GlGraphics as PistonGlGraphics, OpenGL};
 use piston::{
     event_loop::{EventSettings as PistonEventSettings, Events as PistonEvents},
     Key,
 };
+use piston::{
+    AdvancedWindow, Button as PistonButton, PressEvent, ReleaseEvent, RenderEvent, UpdateEvent,
+    WindowSettings as PistonWindowSettings,
+};
+use pyo3::wrap_pyfunction;
+use pyo3::{prelude::*, wrap_pymodule};
+use std::collections::HashSet;
 
-pub mod window;
+pub mod graphics;
 pub mod input;
-use window::{Window, WindowSettings, events::{EventSettings, Events, RenderArgs, UpdateArgs, Viewport}};
+pub mod opengl;
+pub mod window;
+
 use window::events::Event;
+use window::{
+    events::{EventSettings, Events, RenderArgs, UpdateArgs, Viewport},
+    Window, WindowSettings,
+};
 
 static VERSION: &str = "0.1.4";
 
 #[pyclass(unsendable)]
 struct Piston2dApp {
-    gl: GlGraphics, // OpenGL drawing backend.
+    gl: PistonGlGraphics, // OpenGL drawing backend.
     window: GlutinWindow,
     keys: HashSet<Key>,
     events: PistonEvents,
 
     render_handlers: Vec<PyObject>,
-    update_handlers: Vec<PyObject>
+    update_handlers: Vec<PyObject>,
 }
 
-#[pymethods(module="piston2d")]
+#[pymethods(module = "piston2d")]
 impl Piston2dApp {
     pub fn tick(&mut self) -> PyResult<()> {
         let e = self.events.next(&mut self.window).unwrap();
@@ -77,7 +86,7 @@ impl Piston2dApp {
 
         Ok(())
     }
-    
+
     pub fn update(&mut self, callable: PyObject) -> PyResult<()> {
         Python::with_gil(|py| {
             let function = callable.as_ref(py);
@@ -115,16 +124,51 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
         .build()
         .unwrap();
 
-
     Ok(Piston2dApp {
-        gl: GlGraphics::new(opengl),
+        gl: PistonGlGraphics::new(opengl),
         window: window,
         keys: HashSet::new(),
         events: PistonEvents::new(PistonEventSettings::new()),
-        
+
         render_handlers: vec![],
-        update_handlers: vec![]
+        update_handlers: vec![],
     })
+}
+
+#[pymodule]
+pub fn input(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<Button>()?;
+
+    Ok(())
+}
+
+#[pymodule]
+pub fn opengl(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<GlGraphics>()?;
+
+    Ok(())
+}
+
+#[pymodule]
+pub fn graphics(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<Context>()?;
+
+    let rectangle_submodule = PyModule::new(_py, "rectangle")?;
+    rectangle::init_submodule(rectangle_submodule)?;
+    m.add_submodule(rectangle_submodule)?;
+
+    Ok(())
+}
+
+#[pymodule]
+pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<WindowSettings>()?;
+    m.add_class::<Window>()?;
+
+    // Submodule events
+    m.add_wrapped(wrap_pymodule!(events))?;
+
+    Ok(())
 }
 
 #[pymodule]
@@ -139,37 +183,22 @@ pub fn events(_py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
-#[pymodule]
-pub fn input(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<Button>()?;
-
-    Ok(())
-}
-
-
-#[pymodule]
-pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<WindowSettings>()?;
-    m.add_class::<Window>()?;
-
-    // Submodule events
-    m.add_wrapped(wrap_pymodule!(events))?;
-
-    Ok(())
-}
-
 /// A Python module implemented in Rust.
 #[pymodule]
 fn piston2d(_py: Python, m: &PyModule) -> PyResult<()> {
     // Add utils
     m.add_function(wrap_pyfunction!(init, m)?)?;
     m.add_class::<Piston2dApp>()?;
-    
+
     // Add window module
     m.add_wrapped(wrap_pymodule!(window))?;
 
     // Add input module
     m.add_wrapped(wrap_pymodule!(input))?;
+
+    // Add graphics module
+    m.add_wrapped(wrap_pymodule!(graphics))?;
+    m.add_wrapped(wrap_pymodule!(opengl))?;
 
     m.add("__version__", VERSION)?;
 

@@ -1,6 +1,6 @@
 from piston2d.piston2d.input import Button
 from piston2d.piston2d.window import Window
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
 
 
 class Event:
@@ -33,7 +33,7 @@ class UpdateArgs:
 
 class Viewport:
     @property
-    def rect(self) -> Tuple[int, int]: ...
+    def rect(self) -> List[float]: ...
     @property
     def draw_size(self) -> Tuple[int, int]: ...
     @property
