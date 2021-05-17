@@ -250,3 +250,15 @@ impl Events {
         })
     }
 }
+
+
+pub fn init_submodule(py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<Event>()?;
+    m.add_class::<Events>()?;
+    m.add_class::<EventSettings>()?;
+    m.add_class::<Viewport>()?;
+    m.add_class::<RenderArgs>()?;
+    m.add_class::<UpdateArgs>()?;
+
+    Ok(())
+}

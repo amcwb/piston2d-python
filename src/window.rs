@@ -1,6 +1,6 @@
 use std::time::Duration;
 
-use pyo3::prelude::*;
+use pyo3::{prelude::*, wrap_pymodule};
 
 use glutin_window::GlutinWindow;
 use piston::{AdvancedWindow, OpenGLWindow, Size, Window as PistonWindow, WindowSettings as PistonWindowSettings};
@@ -327,4 +327,17 @@ impl Window {
             _ => None
         })
     }
+}
+
+
+pub fn init_submodule(py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<WindowSettings>()?;
+    m.add_class::<Window>()?;
+
+    // Submodule events
+    let submod = PyModule::new(py, "events")?;
+    events::init_submodule(py, submod)?;
+    m.add_submodule(submod)?;
+
+    Ok(())
 }

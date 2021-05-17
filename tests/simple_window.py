@@ -1,11 +1,12 @@
 
-from piston2d.graphics.rectangle import rectangle
+from piston2d.graphics import circle_arc
 from piston2d.graphics import Context
 from piston2d.window.events import Events, EventSettings
 from piston2d.window import WindowSettings
 from piston2d.window import Window
 from piston2d.opengl import GlGraphics, draw
 import random
+import math
 
 window = Window(WindowSettings("test", (100, 100)))
 events = Events(EventSettings())
@@ -45,7 +46,8 @@ while event := events.next(window):
 
     if args := event.render_args():
         context = graphics.draw_begin(args.viewport)
-        # graphics.clear_color([red(), green(), blue(), 1.0])
-        rectangle([1.0, 1.0, 1.0, 1.0], args.viewport.rect, graphics)
+        graphics.clear_color([red(), green(), blue(), 1.0])
+        circle_arc([1.0, 1.0, 1.0, 1.0], 30.0, 0.0, math.tau, args.viewport.rect, graphics)
+        # rectangle([1.0, 1.0, 1.0, 1.0], args.viewport.rect, graphics)
         graphics.draw_end()
         pass

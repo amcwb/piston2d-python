@@ -55,3 +55,10 @@ impl From<PistonButton> for Button {
         Button { _piston: pb }
     }
 }
+
+
+pub fn init_submodule(py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<Button>()?;
+
+    Ok(())
+}

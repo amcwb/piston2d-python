@@ -1,8 +1,4 @@
-use crate::graphics::rectangle;
-use crate::graphics::Context;
 use glutin_window::GlutinWindow;
-use input::Button;
-use opengl::GlGraphics;
 use opengl_graphics::{GlGraphics as PistonGlGraphics, OpenGL};
 use piston::{
     event_loop::{EventSettings as PistonEventSettings, Events as PistonEvents},
@@ -20,12 +16,6 @@ pub mod graphics;
 pub mod input;
 pub mod opengl;
 pub mod window;
-
-use window::events::Event;
-use window::{
-    events::{EventSettings, Events, RenderArgs, UpdateArgs, Viewport},
-    Window, WindowSettings,
-};
 
 static VERSION: &str = "0.1.4";
 
@@ -136,49 +126,29 @@ fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
 }
 
 #[pymodule]
-pub fn input(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<Button>()?;
+pub fn input(py: Python, m: &PyModule) -> PyResult<()> {
+    input::init_submodule(py, m)?;
 
     Ok(())
 }
 
 #[pymodule]
-pub fn opengl(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<GlGraphics>()?;
+pub fn opengl(py: Python, m: &PyModule) -> PyResult<()> {
+    opengl::init_submodule(py, m)?;
 
     Ok(())
 }
 
 #[pymodule]
-pub fn graphics(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<Context>()?;
-
-    let rectangle_submodule = PyModule::new(_py, "rectangle")?;
-    rectangle::init_submodule(rectangle_submodule)?;
-    m.add_submodule(rectangle_submodule)?;
+pub fn graphics(py: Python, m: &PyModule) -> PyResult<()> {
+    graphics::init_submodule(py, m)?;
 
     Ok(())
 }
 
 #[pymodule]
-pub fn window(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<WindowSettings>()?;
-    m.add_class::<Window>()?;
-
-    // Submodule events
-    m.add_wrapped(wrap_pymodule!(events))?;
-
-    Ok(())
-}
-
-#[pymodule]
-pub fn events(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<Event>()?;
-    m.add_class::<Events>()?;
-    m.add_class::<EventSettings>()?;
-    m.add_class::<Viewport>()?;
-    m.add_class::<RenderArgs>()?;
-    m.add_class::<UpdateArgs>()?;
+pub fn window(py: Python, m: &PyModule) -> PyResult<()> {
+    window::init_submodule(py, m)?;
 
     Ok(())
 }
