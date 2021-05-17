@@ -1,5 +1,5 @@
 # piston2d
-![](https://img.shields.io/github/license/starsflower/piston2d-python.svg) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![made-with-rust](https://img.shields.io/badge/Made%20with-Rust-b7410e.svg)](https://www.rust-lang.org/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/starsflower/piston2d-python/pulls) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/starsflower/piston2d-python/graphs/commit-activity)
+[![](https://img.shields.io/github/v/release/starsflower/piston2d-python.svg?include_prereleases)](https://GitHub.com/starsflower/piston2d-python/releases/) ![](https://img.shields.io/github/license/starsflower/piston2d-python.svg) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![made-with-rust](https://img.shields.io/badge/Made%20with-Rust-b7410e.svg)](https://www.rust-lang.org/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/starsflower/piston2d-python/pulls)
 
 
 
