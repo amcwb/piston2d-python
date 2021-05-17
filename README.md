@@ -1,5 +1,8 @@
 # piston2d
-[![forthebadge](https://forthebadge.com/images/badges/made-with-rust.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+![](https://img.shields.io/github/license/starsflower/piston2d-python.svg) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![made-with-rust](https://img.shields.io/badge/Made%20with-Rust-b7410e.svg)](https://www.rust-lang.org/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/starsflower/piston2d-python/pulls) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/starsflower/piston2d-python/graphs/commit-activity)
+
+
+
 
 `piston2d`, or `piston2d-python`, is a Python binding for the amazing Rust library `piston2d`.
 
