@@ -27,14 +27,16 @@ jobs:
     
     - name: Install requirements
       run:  |
-        python -m pip install -r requirements.txt
-        python -m pip install -r requirements-doc.txt
+        python -m pip install -U -r requirements.txt
+        python -m pip install -U -r requirements-doc.txt
     
     - name: Build
       run: python setup.py build
     
-    - name: Build and Commit
-      uses: sphinx-notes/pages@master
+    - name: Build
+      run: |
+        sphinx-apidoc -o source piston2d
+        make html
     
     - name: Push to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
