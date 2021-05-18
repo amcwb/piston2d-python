@@ -6,7 +6,23 @@ on:
       - main
 
 jobs:
-  build:
+  build_rust:
+    name: Rust build check 🛠
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: ${{ matrix.platform.rust-target }}
+          profile: minimal
+          default: true
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features
+  build_docs:
+    name: Build documentation 📚
     runs-on: ubuntu-latest
 
     steps:
@@ -35,11 +51,12 @@ jobs:
     
     - name: Build
       run: |
-        sphinx-apidoc -o source piston2d
+        sphinx-apidoc -o docs piston2d
+        cd docs
         make html
     
     - name: Push to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/html
+        publish_dir: ./docs/_build/html

@@ -6,8 +6,11 @@
 Welcome to piston2d's documentation!
 ====================================
 
+Piston2d is a simple Python wrapper around the Rust library `Piston2d
+<https://crates.io/crates/piston2d-graphics>`_. 
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
 
@@ -16,4 +19,3 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`

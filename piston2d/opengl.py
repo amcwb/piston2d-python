@@ -5,7 +5,7 @@ from typing import Any, Callable
 
 GlGraphics = opengl.GlGraphics
 
-def draw(gl: GlGraphics, viewport: Viewport, func: Callable[[Context, "GlGraphics"], None]):
+def draw(gl: GlGraphics, viewport: Viewport, func: Callable[[Context, "GlGraphics"], None]) -> None:
     """
     Wrapper around the :func:`GlGraphics.draw_begin` and
     :func:`GlGraphics.draw_end` pair, similar to the piston2d built-in

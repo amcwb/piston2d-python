@@ -7,11 +7,13 @@ class Key:
     """
     Utility class for key numbers. Used to compare against button values.
 
-    ```python
+
+    .. code-block:: python
+    
         if button := event.press_args() and button.is_key():
             if button.value == Key.A:
                 print("A!")
-    ```
+
     """
     Unknown = 0x00
     Backspace = 0x08
