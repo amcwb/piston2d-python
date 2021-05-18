@@ -30,8 +30,8 @@ jobs:
         python -m pip install -U -r requirements.txt
         python -m pip install -U -r requirements-doc.txt
     
-    - name: Build
-      run: python setup.py build
+    - name: Build to local pip
+      run: python setup.py install
     
     - name: Build
       run: |
