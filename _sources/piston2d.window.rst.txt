@@ -1,21 +1,15 @@
 piston2d.window package
 =======================
 
-Submodules
-----------
-
-piston2d.window.events module
------------------------------
-
-.. automodule:: piston2d.window.events
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: piston2d.window
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   piston2d.window.events

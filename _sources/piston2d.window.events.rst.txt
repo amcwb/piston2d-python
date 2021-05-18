@@ -1,0 +1,7 @@
+piston2d.window.events module
+=============================
+
+.. automodule:: piston2d.window.events
+   :members:
+   :undoc-members:
+   :show-inheritance:

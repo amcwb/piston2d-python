@@ -1,0 +1,7 @@
+piston2d.input module
+=====================
+
+.. automodule:: piston2d.input
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,1521 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>piston2d.input module &mdash; piston2d  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> piston2d
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">piston2d.input module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">piston2d</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>piston2d.input module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/piston2d.input.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-piston2d.input">
+<span id="piston2d-input-module"></span><h1>piston2d.input module<a class="headerlink" href="#module-piston2d.input" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.input.Button">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.input.</span></span><span class="sig-name descname"><span class="pre">Button</span></span><a class="headerlink" href="#piston2d.input.Button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.input.Button.is_controller">
+<span class="sig-name descname"><span class="pre">is_controller</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#piston2d.input.Button.is_controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the button is a controller button</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.input.Button.is_hat">
+<span class="sig-name descname"><span class="pre">is_hat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#piston2d.input.Button.is_hat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the button is a controller hat (d-pad)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.input.Button.is_key">
+<span class="sig-name descname"><span class="pre">is_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#piston2d.input.Button.is_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the button is a keyboard button</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.input.Button.is_mouse">
+<span class="sig-name descname"><span class="pre">is_mouse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#piston2d.input.Button.is_mouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the button is a mouse button</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.input.Button.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#piston2d.input.Button.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The “value” of this button, regardless of type</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to the nature of this function, values for types may collide!
+It is instaed recommended to check the type of the button before
+trying to get its value.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This early implementation of the function returns <code class="docutils literal notranslate"><span class="pre">None</span></code> for both
+<code class="docutils literal notranslate"><span class="pre">Controller</span></code> and <code class="docutils literal notranslate"><span class="pre">Hat</span></code> buttons. This will likely change.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.input.Key">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.input.</span></span><span class="sig-name descname"><span class="pre">Key</span></span><a class="headerlink" href="#piston2d.input.Key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Utility class for key numbers. Used to compare against button values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">button</span> <span class="o">:=</span> <span class="n">event</span><span class="o">.</span><span class="n">press_args</span><span class="p">()</span> <span class="ow">and</span> <span class="n">button</span><span class="o">.</span><span class="n">is_key</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">Key</span><span class="o">.</span><span class="n">A</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.A">
+<span class="sig-name descname"><span class="pre">A</span></span><em class="property"> <span class="pre">=</span> <span class="pre">97</span></em><a class="headerlink" href="#piston2d.input.Key.A" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcBack">
+<span class="sig-name descname"><span class="pre">AcBack</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742094</span></em><a class="headerlink" href="#piston2d.input.Key.AcBack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcBookmarks">
+<span class="sig-name descname"><span class="pre">AcBookmarks</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742098</span></em><a class="headerlink" href="#piston2d.input.Key.AcBookmarks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcForward">
+<span class="sig-name descname"><span class="pre">AcForward</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742095</span></em><a class="headerlink" href="#piston2d.input.Key.AcForward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcHome">
+<span class="sig-name descname"><span class="pre">AcHome</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742093</span></em><a class="headerlink" href="#piston2d.input.Key.AcHome" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcRefresh">
+<span class="sig-name descname"><span class="pre">AcRefresh</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742097</span></em><a class="headerlink" href="#piston2d.input.Key.AcRefresh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcSearch">
+<span class="sig-name descname"><span class="pre">AcSearch</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742092</span></em><a class="headerlink" href="#piston2d.input.Key.AcSearch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AcStop">
+<span class="sig-name descname"><span class="pre">AcStop</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742096</span></em><a class="headerlink" href="#piston2d.input.Key.AcStop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Again">
+<span class="sig-name descname"><span class="pre">Again</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741945</span></em><a class="headerlink" href="#piston2d.input.Key.Again" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AltErase">
+<span class="sig-name descname"><span class="pre">AltErase</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741977</span></em><a class="headerlink" href="#piston2d.input.Key.AltErase" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Ampersand">
+<span class="sig-name descname"><span class="pre">Ampersand</span></span><em class="property"> <span class="pre">=</span> <span class="pre">38</span></em><a class="headerlink" href="#piston2d.input.Key.Ampersand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Application">
+<span class="sig-name descname"><span class="pre">Application</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741925</span></em><a class="headerlink" href="#piston2d.input.Key.Application" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Asterisk">
+<span class="sig-name descname"><span class="pre">Asterisk</span></span><em class="property"> <span class="pre">=</span> <span class="pre">42</span></em><a class="headerlink" href="#piston2d.input.Key.Asterisk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.At">
+<span class="sig-name descname"><span class="pre">At</span></span><em class="property"> <span class="pre">=</span> <span class="pre">64</span></em><a class="headerlink" href="#piston2d.input.Key.At" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AudioMute">
+<span class="sig-name descname"><span class="pre">AudioMute</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742086</span></em><a class="headerlink" href="#piston2d.input.Key.AudioMute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AudioNext">
+<span class="sig-name descname"><span class="pre">AudioNext</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742082</span></em><a class="headerlink" href="#piston2d.input.Key.AudioNext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AudioPlay">
+<span class="sig-name descname"><span class="pre">AudioPlay</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742085</span></em><a class="headerlink" href="#piston2d.input.Key.AudioPlay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AudioPrev">
+<span class="sig-name descname"><span class="pre">AudioPrev</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742083</span></em><a class="headerlink" href="#piston2d.input.Key.AudioPrev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.AudioStop">
+<span class="sig-name descname"><span class="pre">AudioStop</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742084</span></em><a class="headerlink" href="#piston2d.input.Key.AudioStop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.B">
+<span class="sig-name descname"><span class="pre">B</span></span><em class="property"> <span class="pre">=</span> <span class="pre">98</span></em><a class="headerlink" href="#piston2d.input.Key.B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Backquote">
+<span class="sig-name descname"><span class="pre">Backquote</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#piston2d.input.Key.Backquote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Backslash">
+<span class="sig-name descname"><span class="pre">Backslash</span></span><em class="property"> <span class="pre">=</span> <span class="pre">92</span></em><a class="headerlink" href="#piston2d.input.Key.Backslash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Backspace">
+<span class="sig-name descname"><span class="pre">Backspace</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8</span></em><a class="headerlink" href="#piston2d.input.Key.Backspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.BrightnessDown">
+<span class="sig-name descname"><span class="pre">BrightnessDown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742099</span></em><a class="headerlink" href="#piston2d.input.Key.BrightnessDown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.BrightnessUp">
+<span class="sig-name descname"><span class="pre">BrightnessUp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742100</span></em><a class="headerlink" href="#piston2d.input.Key.BrightnessUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.C">
+<span class="sig-name descname"><span class="pre">C</span></span><em class="property"> <span class="pre">=</span> <span class="pre">99</span></em><a class="headerlink" href="#piston2d.input.Key.C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Calculator">
+<span class="sig-name descname"><span class="pre">Calculator</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742090</span></em><a class="headerlink" href="#piston2d.input.Key.Calculator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Cancel">
+<span class="sig-name descname"><span class="pre">Cancel</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741979</span></em><a class="headerlink" href="#piston2d.input.Key.Cancel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.CapsLock">
+<span class="sig-name descname"><span class="pre">CapsLock</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741881</span></em><a class="headerlink" href="#piston2d.input.Key.CapsLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Caret">
+<span class="sig-name descname"><span class="pre">Caret</span></span><em class="property"> <span class="pre">=</span> <span class="pre">94</span></em><a class="headerlink" href="#piston2d.input.Key.Caret" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Clear">
+<span class="sig-name descname"><span class="pre">Clear</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741980</span></em><a class="headerlink" href="#piston2d.input.Key.Clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.ClearAgain">
+<span class="sig-name descname"><span class="pre">ClearAgain</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741986</span></em><a class="headerlink" href="#piston2d.input.Key.ClearAgain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Colon">
+<span class="sig-name descname"><span class="pre">Colon</span></span><em class="property"> <span class="pre">=</span> <span class="pre">58</span></em><a class="headerlink" href="#piston2d.input.Key.Colon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Comma">
+<span class="sig-name descname"><span class="pre">Comma</span></span><em class="property"> <span class="pre">=</span> <span class="pre">44</span></em><a class="headerlink" href="#piston2d.input.Key.Comma" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Computer">
+<span class="sig-name descname"><span class="pre">Computer</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742091</span></em><a class="headerlink" href="#piston2d.input.Key.Computer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Copy">
+<span class="sig-name descname"><span class="pre">Copy</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741948</span></em><a class="headerlink" href="#piston2d.input.Key.Copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.CrSel">
+<span class="sig-name descname"><span class="pre">CrSel</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741987</span></em><a class="headerlink" href="#piston2d.input.Key.CrSel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.CurrencySubUnit">
+<span class="sig-name descname"><span class="pre">CurrencySubUnit</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742005</span></em><a class="headerlink" href="#piston2d.input.Key.CurrencySubUnit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.CurrencyUnit">
+<span class="sig-name descname"><span class="pre">CurrencyUnit</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742004</span></em><a class="headerlink" href="#piston2d.input.Key.CurrencyUnit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Cut">
+<span class="sig-name descname"><span class="pre">Cut</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741947</span></em><a class="headerlink" href="#piston2d.input.Key.Cut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D">
+<span class="sig-name descname"><span class="pre">D</span></span><em class="property"> <span class="pre">=</span> <span class="pre">100</span></em><a class="headerlink" href="#piston2d.input.Key.D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D0">
+<span class="sig-name descname"><span class="pre">D0</span></span><em class="property"> <span class="pre">=</span> <span class="pre">48</span></em><a class="headerlink" href="#piston2d.input.Key.D0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D1">
+<span class="sig-name descname"><span class="pre">D1</span></span><em class="property"> <span class="pre">=</span> <span class="pre">49</span></em><a class="headerlink" href="#piston2d.input.Key.D1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D2">
+<span class="sig-name descname"><span class="pre">D2</span></span><em class="property"> <span class="pre">=</span> <span class="pre">50</span></em><a class="headerlink" href="#piston2d.input.Key.D2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D3">
+<span class="sig-name descname"><span class="pre">D3</span></span><em class="property"> <span class="pre">=</span> <span class="pre">51</span></em><a class="headerlink" href="#piston2d.input.Key.D3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D4">
+<span class="sig-name descname"><span class="pre">D4</span></span><em class="property"> <span class="pre">=</span> <span class="pre">52</span></em><a class="headerlink" href="#piston2d.input.Key.D4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D5">
+<span class="sig-name descname"><span class="pre">D5</span></span><em class="property"> <span class="pre">=</span> <span class="pre">53</span></em><a class="headerlink" href="#piston2d.input.Key.D5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D6">
+<span class="sig-name descname"><span class="pre">D6</span></span><em class="property"> <span class="pre">=</span> <span class="pre">54</span></em><a class="headerlink" href="#piston2d.input.Key.D6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D7">
+<span class="sig-name descname"><span class="pre">D7</span></span><em class="property"> <span class="pre">=</span> <span class="pre">55</span></em><a class="headerlink" href="#piston2d.input.Key.D7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D8">
+<span class="sig-name descname"><span class="pre">D8</span></span><em class="property"> <span class="pre">=</span> <span class="pre">56</span></em><a class="headerlink" href="#piston2d.input.Key.D8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.D9">
+<span class="sig-name descname"><span class="pre">D9</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57</span></em><a class="headerlink" href="#piston2d.input.Key.D9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.DecimalSeparator">
+<span class="sig-name descname"><span class="pre">DecimalSeparator</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742003</span></em><a class="headerlink" href="#piston2d.input.Key.DecimalSeparator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><em class="property"> <span class="pre">=</span> <span class="pre">127</span></em><a class="headerlink" href="#piston2d.input.Key.Delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.DisplaySwitch">
+<span class="sig-name descname"><span class="pre">DisplaySwitch</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742101</span></em><a class="headerlink" href="#piston2d.input.Key.DisplaySwitch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Dollar">
+<span class="sig-name descname"><span class="pre">Dollar</span></span><em class="property"> <span class="pre">=</span> <span class="pre">36</span></em><a class="headerlink" href="#piston2d.input.Key.Dollar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Down">
+<span class="sig-name descname"><span class="pre">Down</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741905</span></em><a class="headerlink" href="#piston2d.input.Key.Down" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.E">
+<span class="sig-name descname"><span class="pre">E</span></span><em class="property"> <span class="pre">=</span> <span class="pre">101</span></em><a class="headerlink" href="#piston2d.input.Key.E" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Eject">
+<span class="sig-name descname"><span class="pre">Eject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742105</span></em><a class="headerlink" href="#piston2d.input.Key.Eject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.End">
+<span class="sig-name descname"><span class="pre">End</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741901</span></em><a class="headerlink" href="#piston2d.input.Key.End" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Equals">
+<span class="sig-name descname"><span class="pre">Equals</span></span><em class="property"> <span class="pre">=</span> <span class="pre">61</span></em><a class="headerlink" href="#piston2d.input.Key.Equals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Escape">
+<span class="sig-name descname"><span class="pre">Escape</span></span><em class="property"> <span class="pre">=</span> <span class="pre">27</span></em><a class="headerlink" href="#piston2d.input.Key.Escape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.ExSel">
+<span class="sig-name descname"><span class="pre">ExSel</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741988</span></em><a class="headerlink" href="#piston2d.input.Key.ExSel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Exclaim">
+<span class="sig-name descname"><span class="pre">Exclaim</span></span><em class="property"> <span class="pre">=</span> <span class="pre">33</span></em><a class="headerlink" href="#piston2d.input.Key.Exclaim" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Execute">
+<span class="sig-name descname"><span class="pre">Execute</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741940</span></em><a class="headerlink" href="#piston2d.input.Key.Execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F">
+<span class="sig-name descname"><span class="pre">F</span></span><em class="property"> <span class="pre">=</span> <span class="pre">102</span></em><a class="headerlink" href="#piston2d.input.Key.F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F1">
+<span class="sig-name descname"><span class="pre">F1</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741882</span></em><a class="headerlink" href="#piston2d.input.Key.F1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F10">
+<span class="sig-name descname"><span class="pre">F10</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741891</span></em><a class="headerlink" href="#piston2d.input.Key.F10" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F11">
+<span class="sig-name descname"><span class="pre">F11</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741892</span></em><a class="headerlink" href="#piston2d.input.Key.F11" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F12">
+<span class="sig-name descname"><span class="pre">F12</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741893</span></em><a class="headerlink" href="#piston2d.input.Key.F12" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F13">
+<span class="sig-name descname"><span class="pre">F13</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741928</span></em><a class="headerlink" href="#piston2d.input.Key.F13" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F14">
+<span class="sig-name descname"><span class="pre">F14</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741929</span></em><a class="headerlink" href="#piston2d.input.Key.F14" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F15">
+<span class="sig-name descname"><span class="pre">F15</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741930</span></em><a class="headerlink" href="#piston2d.input.Key.F15" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F16">
+<span class="sig-name descname"><span class="pre">F16</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741931</span></em><a class="headerlink" href="#piston2d.input.Key.F16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F17">
+<span class="sig-name descname"><span class="pre">F17</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741932</span></em><a class="headerlink" href="#piston2d.input.Key.F17" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F18">
+<span class="sig-name descname"><span class="pre">F18</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741933</span></em><a class="headerlink" href="#piston2d.input.Key.F18" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F19">
+<span class="sig-name descname"><span class="pre">F19</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741934</span></em><a class="headerlink" href="#piston2d.input.Key.F19" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F2">
+<span class="sig-name descname"><span class="pre">F2</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741883</span></em><a class="headerlink" href="#piston2d.input.Key.F2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F20">
+<span class="sig-name descname"><span class="pre">F20</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741935</span></em><a class="headerlink" href="#piston2d.input.Key.F20" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F21">
+<span class="sig-name descname"><span class="pre">F21</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741936</span></em><a class="headerlink" href="#piston2d.input.Key.F21" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F22">
+<span class="sig-name descname"><span class="pre">F22</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741937</span></em><a class="headerlink" href="#piston2d.input.Key.F22" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F23">
+<span class="sig-name descname"><span class="pre">F23</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741938</span></em><a class="headerlink" href="#piston2d.input.Key.F23" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F24">
+<span class="sig-name descname"><span class="pre">F24</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741939</span></em><a class="headerlink" href="#piston2d.input.Key.F24" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F3">
+<span class="sig-name descname"><span class="pre">F3</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741884</span></em><a class="headerlink" href="#piston2d.input.Key.F3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F4">
+<span class="sig-name descname"><span class="pre">F4</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741885</span></em><a class="headerlink" href="#piston2d.input.Key.F4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F5">
+<span class="sig-name descname"><span class="pre">F5</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741886</span></em><a class="headerlink" href="#piston2d.input.Key.F5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F6">
+<span class="sig-name descname"><span class="pre">F6</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741887</span></em><a class="headerlink" href="#piston2d.input.Key.F6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F7">
+<span class="sig-name descname"><span class="pre">F7</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741888</span></em><a class="headerlink" href="#piston2d.input.Key.F7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F8">
+<span class="sig-name descname"><span class="pre">F8</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741889</span></em><a class="headerlink" href="#piston2d.input.Key.F8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.F9">
+<span class="sig-name descname"><span class="pre">F9</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741890</span></em><a class="headerlink" href="#piston2d.input.Key.F9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Find">
+<span class="sig-name descname"><span class="pre">Find</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741950</span></em><a class="headerlink" href="#piston2d.input.Key.Find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.G">
+<span class="sig-name descname"><span class="pre">G</span></span><em class="property"> <span class="pre">=</span> <span class="pre">103</span></em><a class="headerlink" href="#piston2d.input.Key.G" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Greater">
+<span class="sig-name descname"><span class="pre">Greater</span></span><em class="property"> <span class="pre">=</span> <span class="pre">62</span></em><a class="headerlink" href="#piston2d.input.Key.Greater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.H">
+<span class="sig-name descname"><span class="pre">H</span></span><em class="property"> <span class="pre">=</span> <span class="pre">104</span></em><a class="headerlink" href="#piston2d.input.Key.H" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Hash">
+<span class="sig-name descname"><span class="pre">Hash</span></span><em class="property"> <span class="pre">=</span> <span class="pre">35</span></em><a class="headerlink" href="#piston2d.input.Key.Hash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Help">
+<span class="sig-name descname"><span class="pre">Help</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741941</span></em><a class="headerlink" href="#piston2d.input.Key.Help" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Home">
+<span class="sig-name descname"><span class="pre">Home</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741898</span></em><a class="headerlink" href="#piston2d.input.Key.Home" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.I">
+<span class="sig-name descname"><span class="pre">I</span></span><em class="property"> <span class="pre">=</span> <span class="pre">105</span></em><a class="headerlink" href="#piston2d.input.Key.I" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Insert">
+<span class="sig-name descname"><span class="pre">Insert</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741897</span></em><a class="headerlink" href="#piston2d.input.Key.Insert" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.J">
+<span class="sig-name descname"><span class="pre">J</span></span><em class="property"> <span class="pre">=</span> <span class="pre">106</span></em><a class="headerlink" href="#piston2d.input.Key.J" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.K">
+<span class="sig-name descname"><span class="pre">K</span></span><em class="property"> <span class="pre">=</span> <span class="pre">107</span></em><a class="headerlink" href="#piston2d.input.Key.K" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.KbdIllumDown">
+<span class="sig-name descname"><span class="pre">KbdIllumDown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742103</span></em><a class="headerlink" href="#piston2d.input.Key.KbdIllumDown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.KbdIllumToggle">
+<span class="sig-name descname"><span class="pre">KbdIllumToggle</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742102</span></em><a class="headerlink" href="#piston2d.input.Key.KbdIllumToggle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.KbdIllumUp">
+<span class="sig-name descname"><span class="pre">KbdIllumUp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742104</span></em><a class="headerlink" href="#piston2d.input.Key.KbdIllumUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.L">
+<span class="sig-name descname"><span class="pre">L</span></span><em class="property"> <span class="pre">=</span> <span class="pre">108</span></em><a class="headerlink" href="#piston2d.input.Key.L" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.LAlt">
+<span class="sig-name descname"><span class="pre">LAlt</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742050</span></em><a class="headerlink" href="#piston2d.input.Key.LAlt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.LCtrl">
+<span class="sig-name descname"><span class="pre">LCtrl</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742048</span></em><a class="headerlink" href="#piston2d.input.Key.LCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.LGui">
+<span class="sig-name descname"><span class="pre">LGui</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742051</span></em><a class="headerlink" href="#piston2d.input.Key.LGui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.LShift">
+<span class="sig-name descname"><span class="pre">LShift</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742049</span></em><a class="headerlink" href="#piston2d.input.Key.LShift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Left">
+<span class="sig-name descname"><span class="pre">Left</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741904</span></em><a class="headerlink" href="#piston2d.input.Key.Left" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.LeftBracket">
+<span class="sig-name descname"><span class="pre">LeftBracket</span></span><em class="property"> <span class="pre">=</span> <span class="pre">91</span></em><a class="headerlink" href="#piston2d.input.Key.LeftBracket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.LeftParen">
+<span class="sig-name descname"><span class="pre">LeftParen</span></span><em class="property"> <span class="pre">=</span> <span class="pre">40</span></em><a class="headerlink" href="#piston2d.input.Key.LeftParen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Less">
+<span class="sig-name descname"><span class="pre">Less</span></span><em class="property"> <span class="pre">=</span> <span class="pre">60</span></em><a class="headerlink" href="#piston2d.input.Key.Less" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.M">
+<span class="sig-name descname"><span class="pre">M</span></span><em class="property"> <span class="pre">=</span> <span class="pre">109</span></em><a class="headerlink" href="#piston2d.input.Key.M" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Mail">
+<span class="sig-name descname"><span class="pre">Mail</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742089</span></em><a class="headerlink" href="#piston2d.input.Key.Mail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.MediaSelect">
+<span class="sig-name descname"><span class="pre">MediaSelect</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742087</span></em><a class="headerlink" href="#piston2d.input.Key.MediaSelect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Menu">
+<span class="sig-name descname"><span class="pre">Menu</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741942</span></em><a class="headerlink" href="#piston2d.input.Key.Menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Minus">
+<span class="sig-name descname"><span class="pre">Minus</span></span><em class="property"> <span class="pre">=</span> <span class="pre">45</span></em><a class="headerlink" href="#piston2d.input.Key.Minus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Mode">
+<span class="sig-name descname"><span class="pre">Mode</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742081</span></em><a class="headerlink" href="#piston2d.input.Key.Mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Mute">
+<span class="sig-name descname"><span class="pre">Mute</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741951</span></em><a class="headerlink" href="#piston2d.input.Key.Mute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.N">
+<span class="sig-name descname"><span class="pre">N</span></span><em class="property"> <span class="pre">=</span> <span class="pre">110</span></em><a class="headerlink" href="#piston2d.input.Key.N" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumLockClear">
+<span class="sig-name descname"><span class="pre">NumLockClear</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741907</span></em><a class="headerlink" href="#piston2d.input.Key.NumLockClear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad0">
+<span class="sig-name descname"><span class="pre">NumPad0</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741922</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad00">
+<span class="sig-name descname"><span class="pre">NumPad00</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742000</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad00" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad000">
+<span class="sig-name descname"><span class="pre">NumPad000</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742001</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad000" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad1">
+<span class="sig-name descname"><span class="pre">NumPad1</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741913</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad2">
+<span class="sig-name descname"><span class="pre">NumPad2</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741914</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad3">
+<span class="sig-name descname"><span class="pre">NumPad3</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741915</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad4">
+<span class="sig-name descname"><span class="pre">NumPad4</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741916</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad5">
+<span class="sig-name descname"><span class="pre">NumPad5</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741917</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad6">
+<span class="sig-name descname"><span class="pre">NumPad6</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741918</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad7">
+<span class="sig-name descname"><span class="pre">NumPad7</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741919</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad8">
+<span class="sig-name descname"><span class="pre">NumPad8</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741920</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPad9">
+<span class="sig-name descname"><span class="pre">NumPad9</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741921</span></em><a class="headerlink" href="#piston2d.input.Key.NumPad9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadA">
+<span class="sig-name descname"><span class="pre">NumPadA</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742012</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadAmpersand">
+<span class="sig-name descname"><span class="pre">NumPadAmpersand</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742023</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadAmpersand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadAt">
+<span class="sig-name descname"><span class="pre">NumPadAt</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742030</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadAt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadB">
+<span class="sig-name descname"><span class="pre">NumPadB</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742013</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadBackspace">
+<span class="sig-name descname"><span class="pre">NumPadBackspace</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742011</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadBackspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadBinary">
+<span class="sig-name descname"><span class="pre">NumPadBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742042</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadBinary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadC">
+<span class="sig-name descname"><span class="pre">NumPadC</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742014</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadClear">
+<span class="sig-name descname"><span class="pre">NumPadClear</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742040</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadClear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadClearEntry">
+<span class="sig-name descname"><span class="pre">NumPadClearEntry</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742041</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadClearEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadColon">
+<span class="sig-name descname"><span class="pre">NumPadColon</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742027</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadColon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadComma">
+<span class="sig-name descname"><span class="pre">NumPadComma</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741957</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadComma" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadD">
+<span class="sig-name descname"><span class="pre">NumPadD</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742015</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadDblAmpersand">
+<span class="sig-name descname"><span class="pre">NumPadDblAmpersand</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742024</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadDblAmpersand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadDblVerticalBar">
+<span class="sig-name descname"><span class="pre">NumPadDblVerticalBar</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742026</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadDblVerticalBar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadDecimal">
+<span class="sig-name descname"><span class="pre">NumPadDecimal</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742044</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadDecimal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadDivide">
+<span class="sig-name descname"><span class="pre">NumPadDivide</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741908</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadDivide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadE">
+<span class="sig-name descname"><span class="pre">NumPadE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742016</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadEnter">
+<span class="sig-name descname"><span class="pre">NumPadEnter</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741912</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadEnter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadEquals">
+<span class="sig-name descname"><span class="pre">NumPadEquals</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741927</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadEquals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadEqualsAS400">
+<span class="sig-name descname"><span class="pre">NumPadEqualsAS400</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741958</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadEqualsAS400" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadExclam">
+<span class="sig-name descname"><span class="pre">NumPadExclam</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742031</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadExclam" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadF">
+<span class="sig-name descname"><span class="pre">NumPadF</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742017</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadGreater">
+<span class="sig-name descname"><span class="pre">NumPadGreater</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742022</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadGreater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadHash">
+<span class="sig-name descname"><span class="pre">NumPadHash</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742028</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadHash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadHexadecimal">
+<span class="sig-name descname"><span class="pre">NumPadHexadecimal</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742045</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadHexadecimal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadLeftBrace">
+<span class="sig-name descname"><span class="pre">NumPadLeftBrace</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742008</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadLeftBrace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadLeftParen">
+<span class="sig-name descname"><span class="pre">NumPadLeftParen</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742006</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadLeftParen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadLess">
+<span class="sig-name descname"><span class="pre">NumPadLess</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742021</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadLess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemAdd">
+<span class="sig-name descname"><span class="pre">NumPadMemAdd</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742035</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemAdd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemClear">
+<span class="sig-name descname"><span class="pre">NumPadMemClear</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742034</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemClear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemDivide">
+<span class="sig-name descname"><span class="pre">NumPadMemDivide</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742038</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemDivide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemMultiply">
+<span class="sig-name descname"><span class="pre">NumPadMemMultiply</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742037</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemMultiply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemRecall">
+<span class="sig-name descname"><span class="pre">NumPadMemRecall</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742033</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemRecall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemStore">
+<span class="sig-name descname"><span class="pre">NumPadMemStore</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742032</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemStore" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMemSubtract">
+<span class="sig-name descname"><span class="pre">NumPadMemSubtract</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742036</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMemSubtract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMinus">
+<span class="sig-name descname"><span class="pre">NumPadMinus</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741910</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMinus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadMultiply">
+<span class="sig-name descname"><span class="pre">NumPadMultiply</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741909</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadMultiply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadOctal">
+<span class="sig-name descname"><span class="pre">NumPadOctal</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742043</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadOctal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadPercent">
+<span class="sig-name descname"><span class="pre">NumPadPercent</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742020</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadPercent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadPeriod">
+<span class="sig-name descname"><span class="pre">NumPadPeriod</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741923</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadPeriod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadPlus">
+<span class="sig-name descname"><span class="pre">NumPadPlus</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741911</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadPlus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadPlusMinus">
+<span class="sig-name descname"><span class="pre">NumPadPlusMinus</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742039</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadPlusMinus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadPower">
+<span class="sig-name descname"><span class="pre">NumPadPower</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742019</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadPower" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadRightBrace">
+<span class="sig-name descname"><span class="pre">NumPadRightBrace</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742009</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadRightBrace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadRightParen">
+<span class="sig-name descname"><span class="pre">NumPadRightParen</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742007</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadRightParen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadSpace">
+<span class="sig-name descname"><span class="pre">NumPadSpace</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742029</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadSpace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadTab">
+<span class="sig-name descname"><span class="pre">NumPadTab</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742010</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadTab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadVerticalBar">
+<span class="sig-name descname"><span class="pre">NumPadVerticalBar</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742025</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadVerticalBar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.NumPadXor">
+<span class="sig-name descname"><span class="pre">NumPadXor</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742018</span></em><a class="headerlink" href="#piston2d.input.Key.NumPadXor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.O">
+<span class="sig-name descname"><span class="pre">O</span></span><em class="property"> <span class="pre">=</span> <span class="pre">111</span></em><a class="headerlink" href="#piston2d.input.Key.O" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Oper">
+<span class="sig-name descname"><span class="pre">Oper</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741985</span></em><a class="headerlink" href="#piston2d.input.Key.Oper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Out">
+<span class="sig-name descname"><span class="pre">Out</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741984</span></em><a class="headerlink" href="#piston2d.input.Key.Out" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.P">
+<span class="sig-name descname"><span class="pre">P</span></span><em class="property"> <span class="pre">=</span> <span class="pre">112</span></em><a class="headerlink" href="#piston2d.input.Key.P" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.PageDown">
+<span class="sig-name descname"><span class="pre">PageDown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741902</span></em><a class="headerlink" href="#piston2d.input.Key.PageDown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.PageUp">
+<span class="sig-name descname"><span class="pre">PageUp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741899</span></em><a class="headerlink" href="#piston2d.input.Key.PageUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Paste">
+<span class="sig-name descname"><span class="pre">Paste</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741949</span></em><a class="headerlink" href="#piston2d.input.Key.Paste" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Pause">
+<span class="sig-name descname"><span class="pre">Pause</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741896</span></em><a class="headerlink" href="#piston2d.input.Key.Pause" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Percent">
+<span class="sig-name descname"><span class="pre">Percent</span></span><em class="property"> <span class="pre">=</span> <span class="pre">37</span></em><a class="headerlink" href="#piston2d.input.Key.Percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Period">
+<span class="sig-name descname"><span class="pre">Period</span></span><em class="property"> <span class="pre">=</span> <span class="pre">46</span></em><a class="headerlink" href="#piston2d.input.Key.Period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Plus">
+<span class="sig-name descname"><span class="pre">Plus</span></span><em class="property"> <span class="pre">=</span> <span class="pre">43</span></em><a class="headerlink" href="#piston2d.input.Key.Plus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Power">
+<span class="sig-name descname"><span class="pre">Power</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741926</span></em><a class="headerlink" href="#piston2d.input.Key.Power" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.PrintScreen">
+<span class="sig-name descname"><span class="pre">PrintScreen</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741894</span></em><a class="headerlink" href="#piston2d.input.Key.PrintScreen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Prior">
+<span class="sig-name descname"><span class="pre">Prior</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741981</span></em><a class="headerlink" href="#piston2d.input.Key.Prior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Q">
+<span class="sig-name descname"><span class="pre">Q</span></span><em class="property"> <span class="pre">=</span> <span class="pre">113</span></em><a class="headerlink" href="#piston2d.input.Key.Q" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Question">
+<span class="sig-name descname"><span class="pre">Question</span></span><em class="property"> <span class="pre">=</span> <span class="pre">63</span></em><a class="headerlink" href="#piston2d.input.Key.Question" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Quote">
+<span class="sig-name descname"><span class="pre">Quote</span></span><em class="property"> <span class="pre">=</span> <span class="pre">39</span></em><a class="headerlink" href="#piston2d.input.Key.Quote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Quotedbl">
+<span class="sig-name descname"><span class="pre">Quotedbl</span></span><em class="property"> <span class="pre">=</span> <span class="pre">34</span></em><a class="headerlink" href="#piston2d.input.Key.Quotedbl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.R">
+<span class="sig-name descname"><span class="pre">R</span></span><em class="property"> <span class="pre">=</span> <span class="pre">114</span></em><a class="headerlink" href="#piston2d.input.Key.R" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.RAlt">
+<span class="sig-name descname"><span class="pre">RAlt</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742054</span></em><a class="headerlink" href="#piston2d.input.Key.RAlt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.RCtrl">
+<span class="sig-name descname"><span class="pre">RCtrl</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742052</span></em><a class="headerlink" href="#piston2d.input.Key.RCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.RGui">
+<span class="sig-name descname"><span class="pre">RGui</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742055</span></em><a class="headerlink" href="#piston2d.input.Key.RGui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.RShift">
+<span class="sig-name descname"><span class="pre">RShift</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742053</span></em><a class="headerlink" href="#piston2d.input.Key.RShift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Return">
+<span class="sig-name descname"><span class="pre">Return</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13</span></em><a class="headerlink" href="#piston2d.input.Key.Return" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Return2">
+<span class="sig-name descname"><span class="pre">Return2</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741982</span></em><a class="headerlink" href="#piston2d.input.Key.Return2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Right">
+<span class="sig-name descname"><span class="pre">Right</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741903</span></em><a class="headerlink" href="#piston2d.input.Key.Right" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.RightBracket">
+<span class="sig-name descname"><span class="pre">RightBracket</span></span><em class="property"> <span class="pre">=</span> <span class="pre">93</span></em><a class="headerlink" href="#piston2d.input.Key.RightBracket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.RightParen">
+<span class="sig-name descname"><span class="pre">RightParen</span></span><em class="property"> <span class="pre">=</span> <span class="pre">41</span></em><a class="headerlink" href="#piston2d.input.Key.RightParen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.S">
+<span class="sig-name descname"><span class="pre">S</span></span><em class="property"> <span class="pre">=</span> <span class="pre">115</span></em><a class="headerlink" href="#piston2d.input.Key.S" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.ScrollLock">
+<span class="sig-name descname"><span class="pre">ScrollLock</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741895</span></em><a class="headerlink" href="#piston2d.input.Key.ScrollLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Select">
+<span class="sig-name descname"><span class="pre">Select</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741943</span></em><a class="headerlink" href="#piston2d.input.Key.Select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Semicolon">
+<span class="sig-name descname"><span class="pre">Semicolon</span></span><em class="property"> <span class="pre">=</span> <span class="pre">59</span></em><a class="headerlink" href="#piston2d.input.Key.Semicolon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Separator">
+<span class="sig-name descname"><span class="pre">Separator</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741983</span></em><a class="headerlink" href="#piston2d.input.Key.Separator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Slash">
+<span class="sig-name descname"><span class="pre">Slash</span></span><em class="property"> <span class="pre">=</span> <span class="pre">47</span></em><a class="headerlink" href="#piston2d.input.Key.Slash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Sleep">
+<span class="sig-name descname"><span class="pre">Sleep</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742106</span></em><a class="headerlink" href="#piston2d.input.Key.Sleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Space">
+<span class="sig-name descname"><span class="pre">Space</span></span><em class="property"> <span class="pre">=</span> <span class="pre">32</span></em><a class="headerlink" href="#piston2d.input.Key.Space" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Stop">
+<span class="sig-name descname"><span class="pre">Stop</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741944</span></em><a class="headerlink" href="#piston2d.input.Key.Stop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Sysreq">
+<span class="sig-name descname"><span class="pre">Sysreq</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741978</span></em><a class="headerlink" href="#piston2d.input.Key.Sysreq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.T">
+<span class="sig-name descname"><span class="pre">T</span></span><em class="property"> <span class="pre">=</span> <span class="pre">116</span></em><a class="headerlink" href="#piston2d.input.Key.T" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Tab">
+<span class="sig-name descname"><span class="pre">Tab</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9</span></em><a class="headerlink" href="#piston2d.input.Key.Tab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.ThousandsSeparator">
+<span class="sig-name descname"><span class="pre">ThousandsSeparator</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742002</span></em><a class="headerlink" href="#piston2d.input.Key.ThousandsSeparator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.U">
+<span class="sig-name descname"><span class="pre">U</span></span><em class="property"> <span class="pre">=</span> <span class="pre">117</span></em><a class="headerlink" href="#piston2d.input.Key.U" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Underscore">
+<span class="sig-name descname"><span class="pre">Underscore</span></span><em class="property"> <span class="pre">=</span> <span class="pre">95</span></em><a class="headerlink" href="#piston2d.input.Key.Underscore" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Undo">
+<span class="sig-name descname"><span class="pre">Undo</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741946</span></em><a class="headerlink" href="#piston2d.input.Key.Undo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#piston2d.input.Key.Unknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Up">
+<span class="sig-name descname"><span class="pre">Up</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741906</span></em><a class="headerlink" href="#piston2d.input.Key.Up" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.V">
+<span class="sig-name descname"><span class="pre">V</span></span><em class="property"> <span class="pre">=</span> <span class="pre">118</span></em><a class="headerlink" href="#piston2d.input.Key.V" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.VolumeDown">
+<span class="sig-name descname"><span class="pre">VolumeDown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741953</span></em><a class="headerlink" href="#piston2d.input.Key.VolumeDown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.VolumeUp">
+<span class="sig-name descname"><span class="pre">VolumeUp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073741952</span></em><a class="headerlink" href="#piston2d.input.Key.VolumeUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.W">
+<span class="sig-name descname"><span class="pre">W</span></span><em class="property"> <span class="pre">=</span> <span class="pre">119</span></em><a class="headerlink" href="#piston2d.input.Key.W" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Www">
+<span class="sig-name descname"><span class="pre">Www</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1073742088</span></em><a class="headerlink" href="#piston2d.input.Key.Www" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.X">
+<span class="sig-name descname"><span class="pre">X</span></span><em class="property"> <span class="pre">=</span> <span class="pre">120</span></em><a class="headerlink" href="#piston2d.input.Key.X" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Y">
+<span class="sig-name descname"><span class="pre">Y</span></span><em class="property"> <span class="pre">=</span> <span class="pre">121</span></em><a class="headerlink" href="#piston2d.input.Key.Y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Key.Z">
+<span class="sig-name descname"><span class="pre">Z</span></span><em class="property"> <span class="pre">=</span> <span class="pre">122</span></em><a class="headerlink" href="#piston2d.input.Key.Z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.input.Mouse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.input.</span></span><span class="sig-name descname"><span class="pre">Mouse</span></span><a class="headerlink" href="#piston2d.input.Mouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Button6">
+<span class="sig-name descname"><span class="pre">Button6</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em><a class="headerlink" href="#piston2d.input.Mouse.Button6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Button7">
+<span class="sig-name descname"><span class="pre">Button7</span></span><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em><a class="headerlink" href="#piston2d.input.Mouse.Button7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Button8">
+<span class="sig-name descname"><span class="pre">Button8</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8</span></em><a class="headerlink" href="#piston2d.input.Mouse.Button8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Left">
+<span class="sig-name descname"><span class="pre">Left</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#piston2d.input.Mouse.Left" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Middle">
+<span class="sig-name descname"><span class="pre">Middle</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#piston2d.input.Mouse.Middle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Right">
+<span class="sig-name descname"><span class="pre">Right</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#piston2d.input.Mouse.Right" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#piston2d.input.Mouse.Unknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.X1">
+<span class="sig-name descname"><span class="pre">X1</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#piston2d.input.Mouse.X1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.input.Mouse.X2">
+<span class="sig-name descname"><span class="pre">X2</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#piston2d.input.Mouse.X2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Avery.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

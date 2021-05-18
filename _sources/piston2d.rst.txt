@@ -1,6 +1,11 @@
 piston2d package
 ================
 
+.. automodule:: piston2d
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -12,34 +17,9 @@ Subpackages
 Submodules
 ----------
 
-piston2d.graphics module
-------------------------
+.. toctree::
+   :maxdepth: 4
 
-.. automodule:: piston2d.graphics
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-piston2d.input module
----------------------
-
-.. automodule:: piston2d.input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-piston2d.opengl module
-----------------------
-
-.. automodule:: piston2d.opengl
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: piston2d
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   piston2d.graphics
+   piston2d.input
+   piston2d.opengl
