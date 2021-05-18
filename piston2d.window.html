@@ -89,8 +89,8 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">piston2d.window package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#piston2d-window-events-module">piston2d.window.events module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-piston2d.window.events">piston2d.window.events module</a></li>
+<li><a class="reference internal" href="#module-piston2d.window">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -165,11 +165,319 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="piston2d-window-events-module">
-<h2>piston2d.window.events module<a class="headerlink" href="#piston2d-window-events-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-piston2d.window.events">
+<span id="piston2d-window-events-module"></span><h2>piston2d.window.events module<a class="headerlink" href="#module-piston2d.window.events" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.events.Event">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.events.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><a class="headerlink" href="#piston2d.window.events.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.is_input">
+<span class="sig-name descname"><span class="pre">is_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.is_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.is_loop">
+<span class="sig-name descname"><span class="pre">is_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.is_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.keypress_args">
+<span class="sig-name descname"><span class="pre">keypress_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.keypress_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.keyrelease_args">
+<span class="sig-name descname"><span class="pre">keyrelease_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.keyrelease_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.mousepress_args">
+<span class="sig-name descname"><span class="pre">mousepress_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.mousepress_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.mouserelease_args">
+<span class="sig-name descname"><span class="pre">mouserelease_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.mouserelease_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.press_args">
+<span class="sig-name descname"><span class="pre">press_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.press_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.release_args">
+<span class="sig-name descname"><span class="pre">release_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.release_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.render_args">
+<span class="sig-name descname"><span class="pre">render_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.render_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Event.update_args">
+<span class="sig-name descname"><span class="pre">update_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Event.update_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.events.</span></span><span class="sig-name descname"><span class="pre">EventSettings</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings.bench_mode">
+<span class="sig-name descname"><span class="pre">bench_mode</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings.bench_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings.lazy">
+<span class="sig-name descname"><span class="pre">lazy</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings.lazy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings.max_fps">
+<span class="sig-name descname"><span class="pre">max_fps</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings.max_fps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings.swap_buffers">
+<span class="sig-name descname"><span class="pre">swap_buffers</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings.swap_buffers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings.ups">
+<span class="sig-name descname"><span class="pre">ups</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings.ups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.EventSettings.ups_reset">
+<span class="sig-name descname"><span class="pre">ups_reset</span></span><a class="headerlink" href="#piston2d.window.events.EventSettings.ups_reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.events.Events">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.events.</span></span><span class="sig-name descname"><span class="pre">Events</span></span><a class="headerlink" href="#piston2d.window.events.Events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.events.Events.next">
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.events.Events.next" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.events.RenderArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.events.</span></span><span class="sig-name descname"><span class="pre">RenderArgs</span></span><a class="headerlink" href="#piston2d.window.events.RenderArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.RenderArgs.draw_size">
+<span class="sig-name descname"><span class="pre">draw_size</span></span><a class="headerlink" href="#piston2d.window.events.RenderArgs.draw_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.RenderArgs.ext_dt">
+<span class="sig-name descname"><span class="pre">ext_dt</span></span><a class="headerlink" href="#piston2d.window.events.RenderArgs.ext_dt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.RenderArgs.viewport">
+<span class="sig-name descname"><span class="pre">viewport</span></span><a class="headerlink" href="#piston2d.window.events.RenderArgs.viewport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.RenderArgs.window_size">
+<span class="sig-name descname"><span class="pre">window_size</span></span><a class="headerlink" href="#piston2d.window.events.RenderArgs.window_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.events.UpdateArgs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.events.</span></span><span class="sig-name descname"><span class="pre">UpdateArgs</span></span><a class="headerlink" href="#piston2d.window.events.UpdateArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.UpdateArgs.dt">
+<span class="sig-name descname"><span class="pre">dt</span></span><a class="headerlink" href="#piston2d.window.events.UpdateArgs.dt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.events.Viewport">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.events.</span></span><span class="sig-name descname"><span class="pre">Viewport</span></span><a class="headerlink" href="#piston2d.window.events.Viewport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.Viewport.draw_size">
+<span class="sig-name descname"><span class="pre">draw_size</span></span><a class="headerlink" href="#piston2d.window.events.Viewport.draw_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.Viewport.rect">
+<span class="sig-name descname"><span class="pre">rect</span></span><a class="headerlink" href="#piston2d.window.events.Viewport.rect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.events.Viewport.window_size">
+<span class="sig-name descname"><span class="pre">window_size</span></span><a class="headerlink" href="#piston2d.window.events.Viewport.window_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-piston2d.window">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-piston2d.window" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.Window">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><a class="headerlink" href="#piston2d.window.Window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.automatic_close">
+<span class="sig-name descname"><span class="pre">automatic_close</span></span><a class="headerlink" href="#piston2d.window.Window.automatic_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.capture_cursor">
+<span class="sig-name descname"><span class="pre">capture_cursor</span></span><a class="headerlink" href="#piston2d.window.Window.capture_cursor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.draw_size">
+<span class="sig-name descname"><span class="pre">draw_size</span></span><a class="headerlink" href="#piston2d.window.Window.draw_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.exit_on_esc">
+<span class="sig-name descname"><span class="pre">exit_on_esc</span></span><a class="headerlink" href="#piston2d.window.Window.exit_on_esc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.hide">
+<span class="sig-name descname"><span class="pre">hide</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.hide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.is_current">
+<span class="sig-name descname"><span class="pre">is_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.is_current" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.make_current">
+<span class="sig-name descname"><span class="pre">make_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.make_current" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.position">
+<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#piston2d.window.Window.position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.should_close">
+<span class="sig-name descname"><span class="pre">should_close</span></span><a class="headerlink" href="#piston2d.window.Window.should_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#piston2d.window.Window.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.swap_buffers">
+<span class="sig-name descname"><span class="pre">swap_buffers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.swap_buffers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.Window.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#piston2d.window.Window.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.wait_event">
+<span class="sig-name descname"><span class="pre">wait_event</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.wait_event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piston2d.window.Window.wait_event_timeout">
+<span class="sig-name descname"><span class="pre">wait_event_timeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#piston2d.window.Window.wait_event_timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">piston2d.window.</span></span><span class="sig-name descname"><span class="pre">WindowSettings</span></span><a class="headerlink" href="#piston2d.window.WindowSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.automatic_close">
+<span class="sig-name descname"><span class="pre">automatic_close</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.automatic_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.controllers">
+<span class="sig-name descname"><span class="pre">controllers</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.controllers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.decorated">
+<span class="sig-name descname"><span class="pre">decorated</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.decorated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.exit_on_esc">
+<span class="sig-name descname"><span class="pre">exit_on_esc</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.exit_on_esc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.fullscreen">
+<span class="sig-name descname"><span class="pre">fullscreen</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.fullscreen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.resizable">
+<span class="sig-name descname"><span class="pre">resizable</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.resizable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.samples">
+<span class="sig-name descname"><span class="pre">samples</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.srgb">
+<span class="sig-name descname"><span class="pre">srgb</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.srgb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.transparent">
+<span class="sig-name descname"><span class="pre">transparent</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.transparent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="piston2d.window.WindowSettings.vsync">
+<span class="sig-name descname"><span class="pre">vsync</span></span><a class="headerlink" href="#piston2d.window.WindowSettings.vsync" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
