@@ -1,0 +1,7 @@
+piston2d
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   piston2d
