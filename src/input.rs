@@ -3,7 +3,7 @@ use pyo3::prelude::*;
 use piston::Button as PistonButton;
 
 
-#[pyclass]
+#[pyclass(module="piston2d.input")]
 pub struct Button {
     pub _piston: PistonButton,
 }

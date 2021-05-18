@@ -63,13 +63,13 @@ fn create_matrix2x3_pylist<T: ToPyObject + Clone>(transform: [[T; 3]; 2]) -> PyR
     Ok(list.to_object(py))
 }
 
-#[pyclass]
+#[pyclass(module="piston2d")]
 #[derive(Clone)]
 pub struct Context {
     pub _piston: PistonContext,
 }
 
-#[pymethods]
+#[pymethods(module="piston2d")]
 impl Context {
     #[getter]
     fn viewport(&self) -> PyResult<Option<Viewport>> {
@@ -106,7 +106,7 @@ impl Context {
     }
 }
 
-#[pyfunction]
+#[pyfunction(module="piston2d.graphics")]
 pub fn rectangle(
     color: [f32; 4],
     rect: [f64; 4],
@@ -118,7 +118,7 @@ pub fn rectangle(
     Ok(())
 }
 
-#[pyfunction]
+#[pyfunction(module="piston2d.graphics")]
 pub fn circle_arc(
     color: [f32; 4],
     radius: f64,

@@ -5,7 +5,7 @@ use std::str::FromStr;
 
 use crate::{graphics::Context, window::events::Viewport};
 
-#[pyclass]
+#[pyclass(module="piston2d.opengl")]
 pub struct GlGraphics {
     pub _piston: PistonGlGraphics,
 }

@@ -9,7 +9,7 @@ use self::events::Event;
 
 pub mod events;
 
-#[pyclass(module="piston2d")]
+#[pyclass(module="piston2d.window")]
 #[derive(Clone)]
 pub struct WindowSettings {
     pub _piston: PistonWindowSettings
@@ -157,7 +157,7 @@ impl WindowSettings {
     }
 }
 
-#[pyclass(unsendable, module="piston2d")]
+#[pyclass(unsendable, module="piston2d.window")]
 pub struct Window {
     pub _piston: GlutinWindow,
 

@@ -7,7 +7,7 @@ use crate::input::Button;
 
 use super::Window;
 
-#[pyclass]
+#[pyclass(module="piston2d.window.event")]
 pub struct Event {
     pub _piston: PistonEvent,
 }
@@ -111,7 +111,7 @@ impl Event {
 }
 
 
-#[pyclass]
+#[pyclass(module="piston2d.window.event")]
 pub struct RenderArgs {
     _piston: PistonRenderArgs,
 }
@@ -147,7 +147,7 @@ impl From<PistonRenderArgs> for RenderArgs {
     }
 }
 
-#[pyclass]
+#[pyclass(module="piston2d")]
 pub struct UpdateArgs {
     pub _piston: PistonUpdateArgs,
 }
@@ -166,7 +166,7 @@ impl From<PistonUpdateArgs> for UpdateArgs {
     }
 }
 
-#[pyclass]
+#[pyclass(module="piston2d.window.event")]
 #[derive(Clone, Copy)]
 pub struct Viewport {
     pub _piston: PistonViewport,
@@ -188,7 +188,7 @@ impl Viewport {
     }
 }
 
-#[pyclass]
+#[pyclass(module="piston2d.window.event")]
 #[derive(Clone, Copy)]
 pub struct EventSettings {
     _piston: PistonEventSettings,
@@ -228,7 +228,7 @@ impl EventSettings {
     }
 }
 
-#[pyclass]
+#[pyclass(module="piston2d.window.event")]
 pub struct Events {
     pub _piston: PistonEvents,
 }

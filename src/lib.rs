@@ -101,7 +101,7 @@ impl Piston2dApp {
     }
 }
 
-#[pyfunction]
+#[pyfunction(module="piston2d")]
 fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
     // Change this to OpenGL::V2_1 if not working.
     let opengl = OpenGL::V3_2;
