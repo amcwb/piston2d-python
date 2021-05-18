@@ -49,6 +49,7 @@ while event := events.next(window):
     if args := event.render_args():
         # Begin the draw loop
         context = graphics.draw_begin(args.viewport)
+        window.title = f"{red():.2f} {green():.2f} {blue():.2f}"
 
         # Make background
         graphics.clear_color([red(), green(), blue(), 1.0])
