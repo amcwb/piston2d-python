@@ -7,6 +7,7 @@ on:
 
 jobs:
   build_rust:
+    if: "!contains(github.event.head_commit.message, '[skip build]')"
     name: Rust build check 🛠
     runs-on: ubuntu-latest
     steps:
@@ -22,6 +23,7 @@ jobs:
           command: build
           args: --release --all-features
   build_docs:
+    if: "!contains(github.event.head_commit.message, '[skip docs]')"
     name: Build documentation 📚
     runs-on: ubuntu-latest
 

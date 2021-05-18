@@ -17,7 +17,7 @@ pub mod input;
 pub mod opengl;
 pub mod window;
 
-static VERSION: &str = "0.1.6-pre.1 ";
+static VERSION: &str = "0.1.6-rc.2 ";
 
 #[pyclass(unsendable)]
 struct Piston2dApp {
