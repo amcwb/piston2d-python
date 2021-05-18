@@ -17,7 +17,7 @@ pub mod input;
 pub mod opengl;
 pub mod window;
 
-static VERSION: &str = "0.1.6-rc.2 ";
+static VERSION: &str = "0.1.6";
 
 #[pyclass(unsendable)]
 struct Piston2dApp {
@@ -101,7 +101,7 @@ impl Piston2dApp {
     }
 }
 
-#[pyfunction(module="piston2d")]
+#[pyfunction(module = "piston2d")]
 fn init(title: &str, dimensions: [u32; 2]) -> PyResult<Piston2dApp> {
     // Change this to OpenGL::V2_1 if not working.
     let opengl = OpenGL::V3_2;
@@ -139,6 +139,16 @@ pub fn opengl(py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
+/**
+Graphics module mirroring ``piston2d_graphics`` for Python built in Rust.
+
+.. note::
+
+    This does not mirror all functions, but is in active developement. It is,
+    however, compulsory to use this module as the current implementation of
+    the binding does not allow the specific creation of any of the shape
+    objects (e.g. ``Rectangle``)
+*/
 #[pymodule]
 pub fn graphics(py: Python, m: &PyModule) -> PyResult<()> {
     graphics::init_submodule(py, m)?;
@@ -146,6 +156,9 @@ pub fn graphics(py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
+/**
+Window module mirroring primarily ``glutin_window``
+*/
 #[pymodule]
 pub fn window(py: Python, m: &PyModule) -> PyResult<()> {
     window::init_submodule(py, m)?;
@@ -153,7 +166,11 @@ pub fn window(py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
-/// A Python module implemented in Rust.
+/// Some helper functions and tools
+///
+/// .. deprecated:: 1.6.0
+///     This header module is deprecated as of 1.6.0, and you should implement
+///     your own functions.
 #[pymodule]
 fn piston2d(_py: Python, m: &PyModule) -> PyResult<()> {
     // Add utils

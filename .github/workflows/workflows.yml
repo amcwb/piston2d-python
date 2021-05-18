@@ -53,9 +53,8 @@ jobs:
     
     - name: Build
       run: |
-        sphinx-apidoc -o docs piston2d
-        cd docs
-        make html
+        sphinx-apidoc -o docs piston2d --separate -M
+        make html -C docs
     
     - name: Push to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

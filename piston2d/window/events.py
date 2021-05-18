@@ -1,5 +1,6 @@
 from ..piston2d import window
 
+__doc__ = window.events.__doc__
 
 Event = window.events.Event
 Events = window.events.Events

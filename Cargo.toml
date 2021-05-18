@@ -1,6 +1,6 @@
 [package]
 name = "piston2d-python"
-version = "0.1.6-rc.2 "
+version = "0.1.6"
 authors = ["Avery <19372006+starsflower@users.noreply.github.com>"]
 edition = "2018"
 

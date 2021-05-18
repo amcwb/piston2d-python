@@ -1,5 +1,7 @@
 from .piston2d import input
 
+__doc__ = input.__doc__
+
 Button = input.Button
 
 

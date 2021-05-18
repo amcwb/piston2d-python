@@ -3,6 +3,8 @@ from .graphics import Context
 from .window.events import Viewport
 from typing import Any, Callable
 
+__doc__ = opengl.__doc__
+
 GlGraphics = opengl.GlGraphics
 
 def draw(gl: GlGraphics, viewport: Viewport, func: Callable[[Context, "GlGraphics"], None]) -> None:

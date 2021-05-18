@@ -1,13 +1,17 @@
 use graphics::Viewport as PistonViewport;
 use pyo3::prelude::*;
 
-use piston::{Button as PistonButton, Event as PistonEvent, EventSettings as PistonEventSettings, Events as PistonEvents, PressEvent, ReleaseEvent, RenderArgs as PistonRenderArgs, RenderEvent, UpdateArgs as PistonUpdateArgs, UpdateEvent};
+use piston::{
+    Button as PistonButton, Event as PistonEvent, EventSettings as PistonEventSettings,
+    Events as PistonEvents, PressEvent, ReleaseEvent, RenderArgs as PistonRenderArgs, RenderEvent,
+    UpdateArgs as PistonUpdateArgs, UpdateEvent,
+};
 
 use crate::input::Button;
 
 use super::Window;
 
-#[pyclass(module="piston2d.window.events")]
+#[pyclass(module = "piston2d.window.events")]
 pub struct Event {
     pub _piston: PistonEvent,
 }
@@ -17,7 +21,7 @@ impl Event {
     /// is_input() -> bool
     ///
     /// Whether the event comes from an ``Event::Input``
-    /// 
+    ///
     /// :rtype: bool
     fn is_input(&self) -> PyResult<bool> {
         match &self._piston {
@@ -29,7 +33,7 @@ impl Event {
     /// is_loop() -> bool
     ///
     /// Whether the event comes from an ``Event::Loop``
-    /// 
+    ///
     /// :rtype: bool
     fn is_loop(&self) -> PyResult<bool> {
         match &self._piston {
@@ -41,7 +45,7 @@ impl Event {
     /// render_args() -> Optional[RenderArgs]
     ///
     /// The render args for this event, if this is a render event
-    /// 
+    ///
     /// :rtype: Optional[RenderArgs]
     fn render_args(&self) -> PyResult<Option<RenderArgs>> {
         match self._piston.render_args() {
@@ -53,7 +57,7 @@ impl Event {
     /// update_args() -> Optional[UpdateArgs]
     ///
     /// The update args for this event, if this is an update event
-    /// 
+    ///
     /// :rtype: Optional[UpdateArgs]
     fn update_args(&self) -> PyResult<Option<UpdateArgs>> {
         match self._piston.update_args() {
@@ -66,7 +70,7 @@ impl Event {
     ///
     /// The button (:class:`Key`, :class:`Mouse`) pressed, if this is a button
     /// press event.
-    /// 
+    ///
     /// :rtype: Optional[Button]
     fn press_args(&self) -> PyResult<Option<Button>> {
         match self._piston.press_args() {
@@ -74,12 +78,12 @@ impl Event {
             None => Ok(None),
         }
     }
-    
+
     /// release_args() -> Optional[Button]
     ///
     /// The button (:class:`Key`, :class:`Mouse`) released, if this is a button
     /// release event.
-    /// 
+    ///
     /// :rtype: Optional[Button]
     fn release_args(&self) -> PyResult<Option<Button>> {
         match self._piston.release_args() {
@@ -92,7 +96,7 @@ impl Event {
     ///
     /// Utility function that returns the :class:`Button` for this event,
     /// only if this event is a keypress.
-    /// 
+    ///
     /// :rtype: Optional[Button]
     fn keypress_args(&self) -> PyResult<Option<Button>> {
         match self._piston.press_args() {
@@ -102,7 +106,7 @@ impl Event {
                 } else {
                     Ok(None)
                 }
-            },
+            }
             None => Ok(None),
         }
     }
@@ -111,7 +115,7 @@ impl Event {
     ///
     /// Utility function that returns the :class:`Button` for this event,
     /// only if this event is a key release.
-    /// 
+    ///
     /// :rtype: Optional[Button]
     fn keyrelease_args(&self) -> PyResult<Option<Button>> {
         match self._piston.release_args() {
@@ -121,7 +125,7 @@ impl Event {
                 } else {
                     Ok(None)
                 }
-            },
+            }
             None => Ok(None),
         }
     }
@@ -140,11 +144,11 @@ impl Event {
                 } else {
                     Ok(None)
                 }
-            },
+            }
             None => Ok(None),
         }
     }
-    
+
     /// mouserelease_args() -> Optional[Button]
     ///
     /// Utility function that returns the :class:`Button` for this event,
@@ -159,15 +163,14 @@ impl Event {
                 } else {
                     Ok(None)
                 }
-            },
+            }
             None => Ok(None),
         }
     }
 }
 
-
 /// Render args for an event
-#[pyclass(module="piston2d.window.events")]
+#[pyclass(module = "piston2d.window.events")]
 pub struct RenderArgs {
     _piston: PistonRenderArgs,
 }
@@ -208,7 +211,7 @@ impl From<PistonRenderArgs> for RenderArgs {
 }
 
 /// Update args for an event
-#[pyclass(module="piston2d.window.events")]
+#[pyclass(module = "piston2d.window.events")]
 pub struct UpdateArgs {
     pub _piston: PistonUpdateArgs,
 }
@@ -229,7 +232,7 @@ impl From<PistonUpdateArgs> for UpdateArgs {
 }
 
 /// Information of the viewport
-#[pyclass(module="piston2d.window.events")]
+#[pyclass(module = "piston2d.window.events")]
 #[derive(Clone, Copy)]
 pub struct Viewport {
     pub _piston: PistonViewport,
@@ -257,7 +260,7 @@ impl Viewport {
 }
 
 /// Settings for the :class:`Events` utility
-#[pyclass(module="piston2d.window.events")]
+#[pyclass(module = "piston2d.window.events")]
 #[derive(Clone, Copy)]
 pub struct EventSettings {
     _piston: PistonEventSettings,
@@ -280,7 +283,7 @@ impl EventSettings {
     fn max_fps(&self) -> PyResult<u64> {
         Ok(self._piston.max_fps)
     }
-    
+
     /// Number of updates per second
     #[getter]
     fn ups(&self) -> PyResult<u64> {
@@ -313,7 +316,7 @@ impl EventSettings {
 }
 
 /// Events utility that provides helper functions for handling the event loop.
-#[pyclass(module="piston2d.window.events")]
+#[pyclass(module = "piston2d.window.events")]
 pub struct Events {
     pub _piston: PistonEvents,
 }
@@ -335,7 +338,7 @@ impl Events {
     /// next(window: Window) -> Optional[Event]
     ///
     /// Get the next event
-    /// 
+    ///
     /// :param window: The window to run on
     /// :type window: Window
     /// :returns: Next event or ``None`` (when ending event loop)
@@ -349,8 +352,7 @@ impl Events {
     }
 }
 
-
-pub fn init_submodule(py: Python, m: &PyModule) -> PyResult<()> {
+pub fn init_submodule(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<Event>()?;
     m.add_class::<Events>()?;
     m.add_class::<EventSettings>()?;

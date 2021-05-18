@@ -1,8 +1,6 @@
 use core::f64;
 use graphics::Context as PistonContext;
-use graphics::{
-    circle_arc as piston_circle_arc, math::Matrix2d, rectangle as piston_rectangle,
-};
+use graphics::{circle_arc as piston_circle_arc, math::Matrix2d, rectangle as piston_rectangle};
 use pyo3::{prelude::*, types::PyList, wrap_pyfunction};
 use std::{convert::TryInto, fmt::Debug};
 
@@ -49,7 +47,7 @@ fn matrix2x3(transform: Option<&PyList>) -> PyResult<Matrix2d> {
     })
 }
 
-/// Expand a native rust [[T; 3]; 2] into a PyList
+/// Expand a native rust `[[T; 3]; 2]` into a PyList
 ///
 /// Return type is specifically vague to avoid fighting with the GIL.
 fn create_matrix2x3_pylist<T: ToPyObject + Clone>(transform: [[T; 3]; 2]) -> PyResult<PyObject> {
@@ -63,7 +61,8 @@ fn create_matrix2x3_pylist<T: ToPyObject + Clone>(transform: [[T; 3]; 2]) -> PyR
     Ok(list.to_object(py))
 }
 
-#[pyclass(module="piston2d.graphics")]
+/// Context of a draw loop
+#[pyclass(module = "piston2d.graphics")]
 #[derive(Clone)]
 pub struct Context {
     pub _piston: PistonContext,
@@ -71,6 +70,9 @@ pub struct Context {
 
 #[pymethods]
 impl Context {
+    /// Get the current viewport
+    ///
+    /// :type: Optional[Viewport]
     #[getter]
     fn viewport(&self) -> PyResult<Option<Viewport>> {
         Ok(match self._piston.viewport {
@@ -78,35 +80,75 @@ impl Context {
             None => None,
         })
     }
-    // #[getter]
-    // fn view(&self) -> PyResult<[[f64; 3]; 2]> {
-    //     Ok(self._piston.view)
-    // }
-    // #[getter]
+
+    /// The view transformation
+    ///
+    /// :type: Tuple[Tuple[float, float, float], Tuple[float, float, float]]
+    #[getter]
+    fn view(&self) -> PyResult<PyObject> {
+        Ok(create_matrix2x3_pylist(self._piston.view)?)
+    }
+
+    /// Gets the transformation for this context.
+    ///
+    /// .. note::
+    ///
+    ///     This should be used as the base context for all objects draw to the
+    ///     screen
+    ///
+    /// :rtype: Tuple[Tuple[float, float, float], Tuple[float, float, float]]
     fn transform(&self) -> PyResult<PyObject> {
         Ok(create_matrix2x3_pylist(self._piston.transform)?)
     }
+
     // #[getter]
     // fn draw_state(&self) -> PyResult<()> {
     //     Ok(())
     // }
+
+    /// Reset the current transformation to the default
     fn reset(&self) -> PyResult<()> {
         self._piston.reset();
 
         Ok(())
     }
+
+    /// Store the current transformation as a new view
     fn store_view(&self) -> PyResult<()> {
         self._piston.store_view();
 
         Ok(())
     }
+
+    /// The current view size
+    ///
+    /// :type: Tuple[float, float]
     #[getter]
     fn get_view_size(&self) -> PyResult<[f64; 2]> {
         Ok(self._piston.get_view_size())
     }
 }
 
-#[pyfunction(module="piston2d.graphics")]
+/// rectangle(color, rect, transform, g) -> None
+///
+/// Draws a rectangle to the Opengl Graphics backend.
+///
+/// :param color: The RGBA color with values between 0.0 and 1.0
+///
+/// :type color: Tuple[float, float, float, float]
+///
+/// :param rect: The rect of the rectangle
+///
+/// :type rect: Tuple[float, float, float, float]
+///
+/// :param transform: The color, a list of length 4 that is
+///
+/// :type transform: Tuple[Tuple[float, float, float], Tuple[float, float, float]]
+///
+/// :param g: The GlGraphics instance
+///
+/// :type g: GlGraphics
+#[pyfunction(rectangle, module = "piston2d.graphics")]
 pub fn rectangle(
     color: [f32; 4],
     rect: [f64; 4],
@@ -118,7 +160,38 @@ pub fn rectangle(
     Ok(())
 }
 
-#[pyfunction(module="piston2d.graphics")]
+/// circle_arc(color, radius, start, end, rect, transform, g) -> None
+///
+/// Draws a circle arc to the Opengl Graphics backend.
+///
+/// :param radius: The radius of the circle arc
+///
+/// :type radius: float
+///
+/// :param start: The starting angle of the circle arc
+///
+/// :type start: float
+///
+/// :param end: The end angle of the circle arc
+///
+/// :type end: float
+///
+/// :param color: The RGBA color with values between 0.0 and 1.0
+///
+/// :type color: Tuple[float, float, float, float]
+///
+/// :param rect: The rect of the rectangle
+///
+/// :type rect: Tuple[float, float, float, float]
+///
+/// :param transform: The color, a list of length 4 that is
+///
+/// :type transform: Tuple[Tuple[float, float, float], Tuple[float, float, float]]
+///
+/// :param g: The GlGraphics instance
+///
+/// :type g: GlGraphics
+#[pyfunction(circle_arc, module = "piston2d.graphics")]
 pub fn circle_arc(
     color: [f32; 4],
     radius: f64,
